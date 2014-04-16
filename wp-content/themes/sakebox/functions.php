@@ -72,6 +72,7 @@ function twentyfourteen_setup() {
 
 	// Add RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
+  add_theme_support( 'woocommerce' );
 
 	// Enable support for Post Thumbnails, and declare two sizes.
 	add_theme_support( 'post-thumbnails' );

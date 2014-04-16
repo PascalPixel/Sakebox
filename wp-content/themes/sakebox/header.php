@@ -1,14 +1,4 @@
-<?php
-/**
- * The Header for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -19,6 +9,8 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+  <script type="text/javascript" src="//use.typekit.net/swx3vts.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
