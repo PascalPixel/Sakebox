@@ -11,56 +11,6 @@ Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar
 Text Domain: sakebox
 */
 
-@font-face {
-font-family: 'Proxima';
-  src: url(fonts/proximanova-regular-webfont.eot?1307578394);
-  src: url('fonts/proximanova-regular-webfont.eot?iefix') format('eot'),url(fonts/proximanova-regular-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-regular-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-regular-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-style: italic;
-  src: url(fonts/proximanova-regitalic-webfont.eot?1307578394);
-  src: url('fonts/proximanova-regitalic-webfont.eot?iefix') format('eot'),url(fonts/proximanova-regitalic-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-regitalic-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-regitalic-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-weight: 300;
-  src: url(fonts/proximanova-light-webfont.eot?1307578394);
-  src: url('fonts/proximanova-light-webfont.eot?iefix') format('eot'),url(fonts/proximanova-light-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-light-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-light-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-weight: 600;
-  src: url(fonts/proximanova-semibold-webfont.eot?1307578394);
-  src: url('fonts/proximanova-semibold-webfont.eot?iefix') format('eot'),url(fonts/proximanova-semibold-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-semibold-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-semibold-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-weight: 600;
-  font-style: italic;
-  src: url(fonts/proximanova-semibolditalic-webfont.eot?1307578394);
-  src: url('fonts/proximanova-semibolditalic-webfont.eot?iefix') format('eot'),url(fonts/proximanova-semibolditalic-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-semibolditalic-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-semibolditalic-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-weight: bold;
-  src: url(fonts/proximanova-bold-webfont.eot?1307578394);
-  src: url('fonts/proximanova-bold-webfont.eot?iefix') format('eot'),url(fonts/proximanova-bold-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-bold-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-bold-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-weight: bold;
-  font-style: italic;
-  src: url(fonts/proximanova-boldit-webfont.eot?1307578394);
-  src: url('fonts/proximanova-boldit-webfont.eot?iefix') format('eot'),url(fonts/proximanova-boldit-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-boldit-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-boldit-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-@font-face {
-  font-family: 'Proxima';
-  font-weight: 900;
-  src: url(fonts/proximanova-extrabold-webfont.eot?1307578394);
-  src: url('fonts/proximanova-extrabold-webfont.eot?iefix') format('eot'),url(fonts/proximanova-extrabold-webfont.woff?1307578394) format('woff'),url(fonts/proximanova-extrabold-webfont.ttf?1307578394) format('truetype'),url('fonts/proximanova-extrabold-webfont.svg#webfont2rpW2ohz') format('svg')
-}
-
 /**
  * 1.0 Bootstrap
  */
@@ -71,64 +21,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
  * 2.0 Repeatable Patterns
  * -----------------------------------------------------------------------------
  */
-
-/* Input fields */
-
-input,
-textarea {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 2px;
-	color: #2b2b2b;
-	padding: 8px 10px 7px;
-}
-
-textarea {
-	width: 100%;
-}
-
-input:focus,
-textarea:focus {
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	outline: 0;
-}
-
-/* Buttons */
-
-button,
-.contributor-posts-link,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	background-color: #0c5e8a;
-	border: 0;
-	border-radius: 2px;
-	color: #fff;
-	font-size: 12px;
-	font-weight: 700;
-	padding: 10px 30px 11px;
-	vertical-align: bottom;
-}
-
-button:hover,
-button:focus,
-.contributor-posts-link:hover,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background-color: #1a7eb4;
-	color: #fff;
-}
-
-button:active,
-.contributor-posts-link:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	background-color: #048fda;
-}
 
 .search-field {
 	width: 100%;
@@ -395,12 +287,6 @@ span + .edit-link:before,
  */
  
  /* Main styles */
-
-body {
-  background: #f5f5f5;
-  font-family: 'Proxima', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
 
 .site {
 	position: relative;
@@ -3767,12 +3653,21 @@ a.post-thumbnail:hover {
 
 /* Static Homepage */
 .hero {
- background: #ba9f75 url(images/sake-barrels.jpg) no-repeat;
- background-size: cover;
+ background: #ba9f75 url(images/pattern.png) repeat;
 }
 .heroback {
-  background: rgba(0,0,0,0.6);
   margin-top: -20px;
-  padding: 20px;
-  color: white;
+  padding: 40px 20px;
+  color: #ffffff;
+  text-shadow:0px 1px 2px rgba(0,0,0,0.3);
+}
+body {
+  background: #f5f5f5;
+  font-family: "proxima-nova", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1, h2 {
+  font-family: "ff-tisa-sans-web-pro", sans-serif;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  font-weight: bold;
 }
