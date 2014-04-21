@@ -235,6 +235,9 @@ function sakebox_scripts() {
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
+	
+	// Add Bootstrap
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.1.1' );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'sakebox-style', get_stylesheet_uri(), array( 'genericons' ) );
@@ -262,8 +265,12 @@ function sakebox_scripts() {
 			'nextText' => __( 'Next', 'sakebox' )
 		) );
 	}
-
+	
 	wp_enqueue_script( 'sakebox-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20131209', true );
+
+  // Bootstrap JS
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '3.1.1', true );
+	
 }
 add_action( 'wp_enqueue_scripts', 'sakebox_scripts' );
 

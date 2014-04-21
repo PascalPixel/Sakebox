@@ -21,13 +21,11 @@ if ($post_image_id) {
   	<div class="row">
   		<div class="col-sm-12">
   		  <div class="heroback">
-    		  <h1>Receive a box of amazing sake samples every month straight from Japan</h1>
-    		  <h3>Fill in your e-mail address and be the first to know when we launch!</h3>
-    		  <button class="btn-primary">Shop now</button>
-    		  <button class="btn-danger" data-toggle="modal" data-target="#subscribe">Subscribe</button>
+    		  <h1>A Monthly Box of<br> Delicious Saké Samples</h1>
+    		  <h3>Subscribe and get notified when we launch,<br> or shop for full-size saké now!</h3>
+    		  <button class="btn btn-danger" data-toggle="modal" data-target="#subscribe">Subscribe</button>
+    		  <a class="btn btn-success" href="/shop">Shop now</a>
   		  </div>
-  		</div>
-  		<div class="col-sm-4 col-md-6 col-lg-7">
   		</div>
   	</div>
   </div>
