@@ -31,14 +31,14 @@ get_header();
 						<span class="full-size-link"><a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>
 
 						<span class="parent-post-link"><a href="<?php echo get_permalink( $post->post_parent ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?></a></span>
-						<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'sakebox' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-meta -->
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 					<div class="entry-attachment">
 						<div class="attachment">
-							<?php twentyfourteen_the_attached_image(); ?>
+							<?php sakebox_the_attached_image(); ?>
 						</div><!-- .attachment -->
 
 						<?php if ( has_excerpt() ) : ?>
@@ -51,7 +51,7 @@ get_header();
 					<?php
 						the_content();
 						wp_link_pages( array(
-							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
+							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'sakebox' ) . '</span>',
 							'after'       => '</div>',
 							'link_before' => '<span>',
 							'link_after'  => '</span>',
@@ -62,8 +62,8 @@ get_header();
 
 			<nav id="image-navigation" class="navigation image-navigation">
 				<div class="nav-links">
-				<?php previous_image_link( false, '<div class="previous-image">' . __( 'Previous Image', 'twentyfourteen' ) . '</div>' ); ?>
-				<?php next_image_link( false, '<div class="next-image">' . __( 'Next Image', 'twentyfourteen' ) . '</div>' ); ?>
+				<?php previous_image_link( false, '<div class="previous-image">' . __( 'Previous Image', 'sakebox' ) . '</div>' ); ?>
+				<?php next_image_link( false, '<div class="next-image">' . __( 'Next Image', 'sakebox' ) . '</div>' ); ?>
 				</div><!-- .nav-links -->
 			</nav><!-- #image-navigation -->
 

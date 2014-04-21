@@ -325,13 +325,13 @@ td {
 	text-align: left;
 }
 
-.widget_twentyfourteen_ephemera .entry-content ul,
-.widget_twentyfourteen_ephemera .entry-content ol {
+.widget_sakebox_ephemera .entry-content ul,
+.widget_sakebox_ephemera .entry-content ol {
 	margin: 0 20px 18px 0;
 }
 
-.widget_twentyfourteen_ephemera .entry-content li > ul,
-.widget_twentyfourteen_ephemera .entry-content li > ol {
+.widget_sakebox_ephemera .entry-content li > ul,
+.widget_sakebox_ephemera .entry-content li > ol {
 	margin: 0 20px 0 0;
 }
 
@@ -347,7 +347,7 @@ td {
 	margin-left: auto;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .widget-title:before {
+.content-sidebar .widget_sakebox_ephemera .widget-title:before {
 	margin: -1px 0 0 18px;
 }
 

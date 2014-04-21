@@ -19,28 +19,12 @@ if ($post_image_id) {
 <div class="hero" style="background:url('<?php echo $thumbnail ?>');background-size:cover;background-repeat:no-repeat;background-position: center center;">
   <div class="container">
   	<div class="row">
-  		<div class="col-sm-8 col-md-6 col-lg-5">
+  		<div class="col-sm-12">
   		  <div class="heroback">
     		  <h1>Receive a box of amazing sake samples every month straight from Japan</h1>
     		  <h3>Fill in your e-mail address and be the first to know when we launch!</h3>
-    		  <!-- Begin MailChimp Signup Form -->
-          <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-          <div id="mc_embed_signup">
-          <form action="http://superpencil.us7.list-manage.com/subscribe/post?u=43a0823be5d7c532fa4f7f239&amp;id=65b3ce1c66" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          	
-          <div class="mc-field-group">
-          	<label for="mce-EMAIL">Email Address </label>
-          	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-          </div>
-          	<div id="mce-responses" class="clear">
-          		<div class="response" id="mce-error-response" style="display:none"></div>
-          		<div class="response" id="mce-success-response" style="display:none"></div>
-          	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;"><input type="text" name="b_43a0823be5d7c532fa4f7f239_65b3ce1c66" value=""></div>
-          	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-          </form>
-          </div>
-          <!--End mc_embed_signup-->
+    		  <button class="btn-primary">Shop now</button>
+    		  <button class="btn-danger" data-toggle="modal" data-target="#subscribe">Subscribe</button>
   		  </div>
   		</div>
   		<div class="col-sm-4 col-md-6 col-lg-7">
@@ -64,6 +48,41 @@ if ($post_image_id) {
     		© Copyright 2014 Rinkya, LLC
   		</div>
   	</div>
+  </div>
+</div>
+
+<div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Begin MailChimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+        <div id="mc_embed_signup">
+        <form action="http://superpencil.us7.list-manage.com/subscribe/post?u=43a0823be5d7c532fa4f7f239&amp;id=65b3ce1c66" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        	
+        <div class="mc-field-group">
+        	<label for="mce-EMAIL">Email Address </label>
+        	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </div>
+        	<div id="mce-responses" class="clear">
+        		<div class="response" id="mce-error-response" style="display:none"></div>
+        		<div class="response" id="mce-success-response" style="display:none"></div>
+        	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_43a0823be5d7c532fa4f7f239_65b3ce1c66" value=""></div>
+        	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>
 

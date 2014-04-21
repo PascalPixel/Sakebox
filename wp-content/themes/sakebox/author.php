@@ -28,7 +28,7 @@ get_header(); ?>
 						 */
 						the_post();
 
-						printf( __( 'All posts by %s', 'twentyfourteen' ), get_the_author() );
+						printf( __( 'All posts by %s', 'sakebox' ), get_the_author() );
 					?>
 				</h1>
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
@@ -56,7 +56,7 @@ get_header(); ?>
 
 					endwhile;
 					// Previous/next page navigation.
-					twentyfourteen_paging_nav();
+					sakebox_paging_nav();
 
 				else :
 					// If no content, include the "No posts found" template.

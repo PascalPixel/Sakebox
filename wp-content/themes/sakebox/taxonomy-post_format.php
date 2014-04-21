@@ -27,28 +27,28 @@ get_header(); ?>
 				<h1 class="archive-title">
 					<?php
 						if ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'twentyfourteen' );
+							_e( 'Asides', 'sakebox' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'twentyfourteen' );
+							_e( 'Images', 'sakebox' );
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'twentyfourteen' );
+							_e( 'Videos', 'sakebox' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audio', 'twentyfourteen' );
+							_e( 'Audio', 'sakebox' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'twentyfourteen' );
+							_e( 'Quotes', 'sakebox' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'twentyfourteen' );
+							_e( 'Links', 'sakebox' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'twentyfourteen' );
+							_e( 'Galleries', 'sakebox' );
 
 						else :
-							_e( 'Archives', 'twentyfourteen' );
+							_e( 'Archives', 'sakebox' );
 
 						endif;
 					?>
@@ -68,7 +68,7 @@ get_header(); ?>
 
 					endwhile;
 					// Previous/next page navigation.
-					twentyfourteen_paging_nav();
+					sakebox_paging_nav();
 
 				else :
 					// If no content, include the "No posts found" template.

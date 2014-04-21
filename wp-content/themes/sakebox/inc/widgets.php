@@ -41,22 +41,22 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	 * @return Twenty_Fourteen_Ephemera_Widget
 	 */
 	public function __construct() {
-		parent::__construct( 'widget_twentyfourteen_ephemera', __( 'Twenty Fourteen Ephemera', 'twentyfourteen' ), array(
-			'classname'   => 'widget_twentyfourteen_ephemera',
-			'description' => __( 'Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts', 'twentyfourteen' ),
+		parent::__construct( 'widget_sakebox_ephemera', __( 'Twenty Fourteen Ephemera', 'sakebox' ), array(
+			'classname'   => 'widget_sakebox_ephemera',
+			'description' => __( 'Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts', 'sakebox' ),
 		) );
 
 		/*
 		 * @todo http://core.trac.wordpress.org/ticket/23257: Add plural versions of Post Format strings
 		 */
 		$this->format_strings = array(
-			'aside'   => __( 'Asides',    'twentyfourteen' ),
-			'image'   => __( 'Images',    'twentyfourteen' ),
-			'video'   => __( 'Videos',    'twentyfourteen' ),
-			'audio'   => __( 'Audio',     'twentyfourteen' ),
-			'quote'   => __( 'Quotes',    'twentyfourteen' ),
-			'link'    => __( 'Links',     'twentyfourteen' ),
-			'gallery' => __( 'Galleries', 'twentyfourteen' ),
+			'aside'   => __( 'Asides',    'sakebox' ),
+			'image'   => __( 'Images',    'sakebox' ),
+			'video'   => __( 'Videos',    'sakebox' ),
+			'audio'   => __( 'Audio',     'sakebox' ),
+			'quote'   => __( 'Quotes',    'sakebox' ),
+			'link'    => __( 'Links',     'sakebox' ),
+			'gallery' => __( 'Galleries', 'sakebox' ),
 		);
 	}
 
@@ -110,7 +110,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 							if ( has_post_format( 'gallery' ) ) :
 
 								if ( post_password_required() ) :
-									the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
+									the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sakebox' ) );
 								else :
 									$images = array();
 
@@ -145,7 +145,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 						<?php endif; ?>
 						<p class="wp-caption-text">
 							<?php
-								printf( _n( 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photo</a>.', 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photos</a>.', $total_images, 'twentyfourteen' ),
+								printf( _n( 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photo</a>.', 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photos</a>.', $total_images, 'sakebox' ),
 									esc_url( get_permalink() ),
 									number_format_i18n( $total_images )
 								);
@@ -155,7 +155,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 								endif;
 
 							else :
-								the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
+								the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sakebox' ) );
 							endif;
 						?>
 					</div><!-- .entry-content -->
@@ -177,7 +177,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 
 								if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 							?>
-							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'sakebox' ), __( '1 Comment', 'sakebox' ), __( '% Comments', 'sakebox' ) ); ?></span>
 							<?php endif; ?>
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->
@@ -186,7 +186,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 				<?php endwhile; ?>
 
 			</ol>
-			<a class="post-format-archive-link" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php printf( __( 'More %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ), $this->format_strings[ $format ] ); ?></a>
+			<a class="post-format-archive-link" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php printf( __( 'More %s <span class="meta-nav">&rarr;</span>', 'sakebox' ), $this->format_strings[ $format ] ); ?></a>
 			<?php
 
 			echo $args['after_widget'];
@@ -233,13 +233,13 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 		$number = empty( $instance['number'] ) ? 2 : absint( $instance['number'] );
 		$format = isset( $instance['format'] ) && in_array( $instance['format'], $this->formats ) ? $instance['format'] : 'aside';
 		?>
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'twentyfourteen' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'sakebox' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"></p>
 
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php _e( 'Number of posts to show:', 'twentyfourteen' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php _e( 'Number of posts to show:', 'sakebox' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" size="3"></p>
 
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php _e( 'Post format to show:', 'twentyfourteen' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php _e( 'Post format to show:', 'sakebox' ); ?></label>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'format' ) ); ?>">
 				<?php foreach ( $this->formats as $slug ) : ?>
 				<option value="<?php echo esc_attr( $slug ); ?>"<?php selected( $format, $slug ); ?>><?php echo get_post_format_string( $slug ); ?></option>

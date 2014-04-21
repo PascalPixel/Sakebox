@@ -28,7 +28,7 @@
 /**
  * Set up the content width value based on the theme's design.
  *
- * @see twentyfourteen_content_width()
+ * @see sakebox_content_width()
  *
  * @since Twenty Fourteen 1.0
  */
@@ -43,7 +43,7 @@ if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-if ( ! function_exists( 'twentyfourteen_setup' ) ) :
+if ( ! function_exists( 'sakebox_setup' ) ) :
 /**
  * Twenty Fourteen setup.
  *
@@ -55,20 +55,20 @@ if ( ! function_exists( 'twentyfourteen_setup' ) ) :
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_setup() {
+function sakebox_setup() {
 
 	/*
 	 * Make Twenty Fourteen available for translation.
 	 *
 	 * Translations can be added to the /languages/ directory.
 	 * If you're building a theme based on Twenty Fourteen, use a find and
-	 * replace to change 'twentyfourteen' to the name of your theme in all
+	 * replace to change 'sakebox' to the name of your theme in all
 	 * template files.
 	 */
-	load_theme_textdomain( 'twentyfourteen', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'sakebox', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor to resemble the theme style.
-	add_editor_style( array( 'css/editor-style.css', twentyfourteen_font_url() ) );
+	add_editor_style( array( 'css/editor-style.css', sakebox_font_url() ) );
 
 	// Add RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
@@ -77,12 +77,12 @@ function twentyfourteen_setup() {
 	// Enable support for Post Thumbnails, and declare two sizes.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 672, 372, true );
-	add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
+	add_image_size( 'sakebox-full-width', 1038, 576, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary'   => __( 'Top primary menu', 'twentyfourteen' ),
-		'secondary' => __( 'Secondary menu in left sidebar', 'twentyfourteen' ),
+		'primary'   => __( 'Top primary menu', 'sakebox' ),
+		'secondary' => __( 'Secondary menu in left sidebar', 'sakebox' ),
 	) );
 
 	/*
@@ -102,21 +102,21 @@ function twentyfourteen_setup() {
 	) );
 
 	// This theme allows users to set a custom background.
-	add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'sakebox_custom_background_args', array(
 		'default-color' => 'f5f5f5',
 	) ) );
 
 	// Add support for featured content.
 	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'twentyfourteen_get_featured_posts',
+		'featured_content_filter' => 'sakebox_get_featured_posts',
 		'max_posts' => 6,
 	) );
 
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
 }
-endif; // twentyfourteen_setup
-add_action( 'after_setup_theme', 'twentyfourteen_setup' );
+endif; // sakebox_setup
+add_action( 'after_setup_theme', 'sakebox_setup' );
 
 /**
  * Adjust content_width value for image attachment template.
@@ -125,12 +125,12 @@ add_action( 'after_setup_theme', 'twentyfourteen_setup' );
  *
  * @return void
  */
-function twentyfourteen_content_width() {
+function sakebox_content_width() {
 	if ( is_attachment() && wp_attachment_is_image() ) {
 		$GLOBALS['content_width'] = 810;
 	}
 }
-add_action( 'template_redirect', 'twentyfourteen_content_width' );
+add_action( 'template_redirect', 'sakebox_content_width' );
 
 /**
  * Getter function for Featured Content Plugin.
@@ -139,7 +139,7 @@ add_action( 'template_redirect', 'twentyfourteen_content_width' );
  *
  * @return array An array of WP_Post objects.
  */
-function twentyfourteen_get_featured_posts() {
+function sakebox_get_featured_posts() {
 	/**
 	 * Filter the featured posts to return in Twenty Fourteen.
 	 *
@@ -147,7 +147,7 @@ function twentyfourteen_get_featured_posts() {
 	 *
 	 * @param array|bool $posts Array of featured posts, otherwise false.
 	 */
-	return apply_filters( 'twentyfourteen_get_featured_posts', array() );
+	return apply_filters( 'sakebox_get_featured_posts', array() );
 }
 
 /**
@@ -157,8 +157,8 @@ function twentyfourteen_get_featured_posts() {
  *
  * @return bool Whether there are featured posts.
  */
-function twentyfourteen_has_featured_posts() {
-	return ! is_paged() && (bool) twentyfourteen_get_featured_posts();
+function sakebox_has_featured_posts() {
+	return ! is_paged() && (bool) sakebox_get_featured_posts();
 }
 
 /**
@@ -168,39 +168,39 @@ function twentyfourteen_has_featured_posts() {
  *
  * @return void
  */
-function twentyfourteen_widgets_init() {
+function sakebox_widgets_init() {
 	require get_template_directory() . '/inc/widgets.php';
 	register_widget( 'Twenty_Fourteen_Ephemera_Widget' );
 
 	register_sidebar( array(
-		'name'          => __( 'Primary Sidebar', 'twentyfourteen' ),
+		'name'          => __( 'Primary Sidebar', 'sakebox' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Main sidebar that appears on the left.', 'twentyfourteen' ),
+		'description'   => __( 'Main sidebar that appears on the left.', 'sakebox' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Content Sidebar', 'twentyfourteen' ),
+		'name'          => __( 'Content Sidebar', 'sakebox' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Additional sidebar that appears on the right.', 'twentyfourteen' ),
+		'description'   => __( 'Additional sidebar that appears on the right.', 'sakebox' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget Area', 'twentyfourteen' ),
+		'name'          => __( 'Footer Widget Area', 'sakebox' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Appears in the footer section of the site.', 'twentyfourteen' ),
+		'description'   => __( 'Appears in the footer section of the site.', 'sakebox' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'twentyfourteen_widgets_init' );
+add_action( 'widgets_init', 'sakebox_widgets_init' );
 
 /**
  * Register Lato Google font for Twenty Fourteen.
@@ -209,13 +209,13 @@ add_action( 'widgets_init', 'twentyfourteen_widgets_init' );
  *
  * @return string
  */
-function twentyfourteen_font_url() {
+function sakebox_font_url() {
 	$font_url = '';
 	/*
 	 * Translators: If there are characters in your language that are not supported
 	 * by Lato, translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'twentyfourteen' ) ) {
+	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'sakebox' ) ) {
 		$font_url = add_query_arg( 'family', urlencode( 'Lato:300,400,700,900,300italic,400italic,700italic' ), "//fonts.googleapis.com/css" );
 	}
 
@@ -229,26 +229,26 @@ function twentyfourteen_font_url() {
  *
  * @return void
  */
-function twentyfourteen_scripts() {
+function sakebox_scripts() {
 	// Add Lato font, used in the main stylesheet.
-	wp_enqueue_style( 'twentyfourteen-lato', twentyfourteen_font_url(), array(), null );
+	wp_enqueue_style( 'sakebox-lato', sakebox_font_url(), array(), null );
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
 
 	// Load our main stylesheet.
-	wp_enqueue_style( 'twentyfourteen-style', get_stylesheet_uri(), array( 'genericons' ) );
+	wp_enqueue_style( 'sakebox-style', get_stylesheet_uri(), array( 'genericons' ) );
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'twentyfourteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentyfourteen-style', 'genericons' ), '20131205' );
-	wp_style_add_data( 'twentyfourteen-ie', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'sakebox-ie', get_template_directory_uri() . '/css/ie.css', array( 'sakebox-style', 'genericons' ), '20131205' );
+	wp_style_add_data( 'sakebox-ie', 'conditional', 'lt IE 9' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'twentyfourteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
+		wp_enqueue_script( 'sakebox-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
 	}
 
 	if ( is_active_sidebar( 'sidebar-3' ) ) {
@@ -256,16 +256,16 @@ function twentyfourteen_scripts() {
 	}
 
 	if ( is_front_page() && 'slider' == get_theme_mod( 'featured_content_layout' ) ) {
-		wp_enqueue_script( 'twentyfourteen-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '20131205', true );
-		wp_localize_script( 'twentyfourteen-slider', 'featuredSliderDefaults', array(
-			'prevText' => __( 'Previous', 'twentyfourteen' ),
-			'nextText' => __( 'Next', 'twentyfourteen' )
+		wp_enqueue_script( 'sakebox-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '20131205', true );
+		wp_localize_script( 'sakebox-slider', 'featuredSliderDefaults', array(
+			'prevText' => __( 'Previous', 'sakebox' ),
+			'nextText' => __( 'Next', 'sakebox' )
 		) );
 	}
 
-	wp_enqueue_script( 'twentyfourteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20131209', true );
+	wp_enqueue_script( 'sakebox-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20131209', true );
 }
-add_action( 'wp_enqueue_scripts', 'twentyfourteen_scripts' );
+add_action( 'wp_enqueue_scripts', 'sakebox_scripts' );
 
 /**
  * Enqueue Google fonts style to admin screen for custom header display.
@@ -274,12 +274,12 @@ add_action( 'wp_enqueue_scripts', 'twentyfourteen_scripts' );
  *
  * @return void
  */
-function twentyfourteen_admin_fonts() {
-	wp_enqueue_style( 'twentyfourteen-lato', twentyfourteen_font_url(), array(), null );
+function sakebox_admin_fonts() {
+	wp_enqueue_style( 'sakebox-lato', sakebox_font_url(), array(), null );
 }
-add_action( 'admin_print_scripts-appearance_page_custom-header', 'twentyfourteen_admin_fonts' );
+add_action( 'admin_print_scripts-appearance_page_custom-header', 'sakebox_admin_fonts' );
 
-if ( ! function_exists( 'twentyfourteen_the_attached_image' ) ) :
+if ( ! function_exists( 'sakebox_the_attached_image' ) ) :
 /**
  * Print the attached image with a link to the next attached image.
  *
@@ -287,7 +287,7 @@ if ( ! function_exists( 'twentyfourteen_the_attached_image' ) ) :
  *
  * @return void
  */
-function twentyfourteen_the_attached_image() {
+function sakebox_the_attached_image() {
 	$post                = get_post();
 	/**
 	 * Filter the default Twenty Fourteen attachment size.
@@ -301,7 +301,7 @@ function twentyfourteen_the_attached_image() {
 	 *     @type int $width  Width of the image in pixels. Default 810.
 	 * }
 	 */
-	$attachment_size     = apply_filters( 'twentyfourteen_attachment_size', array( 810, 810 ) );
+	$attachment_size     = apply_filters( 'sakebox_attachment_size', array( 810, 810 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/*
@@ -348,7 +348,7 @@ function twentyfourteen_the_attached_image() {
 }
 endif;
 
-if ( ! function_exists( 'twentyfourteen_list_authors' ) ) :
+if ( ! function_exists( 'sakebox_list_authors' ) ) :
 /**
  * Print a list of all site contributors who published at least one post.
  *
@@ -356,7 +356,7 @@ if ( ! function_exists( 'twentyfourteen_list_authors' ) ) :
  *
  * @return void
  */
-function twentyfourteen_list_authors() {
+function sakebox_list_authors() {
 	$contributor_ids = get_users( array(
 		'fields'  => 'ID',
 		'orderby' => 'post_count',
@@ -382,7 +382,7 @@ function twentyfourteen_list_authors() {
 					<?php echo get_the_author_meta( 'description', $contributor_id ); ?>
 				</p>
 				<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>">
-					<?php printf( _n( '%d Article', '%d Articles', $post_count, 'twentyfourteen' ), $post_count ); ?>
+					<?php printf( _n( '%d Article', '%d Articles', $post_count, 'sakebox' ), $post_count ); ?>
 				</a>
 			</div><!-- .contributor-summary -->
 		</div><!-- .contributor-info -->
@@ -410,7 +410,7 @@ endif;
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
-function twentyfourteen_body_classes( $classes ) {
+function sakebox_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
@@ -448,7 +448,7 @@ function twentyfourteen_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'twentyfourteen_body_classes' );
+add_filter( 'body_class', 'sakebox_body_classes' );
 
 /**
  * Extend the default WordPress post classes.
@@ -461,14 +461,14 @@ add_filter( 'body_class', 'twentyfourteen_body_classes' );
  * @param array $classes A list of existing post class values.
  * @return array The filtered post class list.
  */
-function twentyfourteen_post_classes( $classes ) {
+function sakebox_post_classes( $classes ) {
 	if ( ! post_password_required() && has_post_thumbnail() ) {
 		$classes[] = 'has-post-thumbnail';
 	}
 
 	return $classes;
 }
-add_filter( 'post_class', 'twentyfourteen_post_classes' );
+add_filter( 'post_class', 'sakebox_post_classes' );
 
 /**
  * Create a nicely formatted and more specific title element text for output
@@ -480,7 +480,7 @@ add_filter( 'post_class', 'twentyfourteen_post_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function twentyfourteen_wp_title( $title, $sep ) {
+function sakebox_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() ) {
@@ -498,12 +498,12 @@ function twentyfourteen_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'twentyfourteen' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'sakebox' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', 'twentyfourteen_wp_title', 10, 2 );
+add_filter( 'wp_title', 'sakebox_wp_title', 10, 2 );
 
 // Implement Custom Header features.
 require get_template_directory() . '/inc/custom-header.php';

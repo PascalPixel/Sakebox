@@ -12,11 +12,11 @@
  *
  * @since Twenty Fourteen 1.0
  *
- * @uses twentyfourteen_header_style()
- * @uses twentyfourteen_admin_header_style()
- * @uses twentyfourteen_admin_header_image()
+ * @uses sakebox_header_style()
+ * @uses sakebox_admin_header_style()
+ * @uses sakebox_admin_header_image()
  */
-function twentyfourteen_custom_header_setup() {
+function sakebox_custom_header_setup() {
 	/**
 	 * Filter Twenty Fourteen custom-header support arguments.
 	 *
@@ -35,26 +35,26 @@ function twentyfourteen_custom_header_setup() {
 	 *                                          the Appearance > Header screen.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'twentyfourteen_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'sakebox_custom_header_args', array(
 		'default-text-color'     => 'fff',
 		'width'                  => 1260,
 		'height'                 => 240,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'twentyfourteen_header_style',
-		'admin-head-callback'    => 'twentyfourteen_admin_header_style',
-		'admin-preview-callback' => 'twentyfourteen_admin_header_image',
+		'wp-head-callback'       => 'sakebox_header_style',
+		'admin-head-callback'    => 'sakebox_admin_header_style',
+		'admin-preview-callback' => 'sakebox_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'twentyfourteen_custom_header_setup' );
+add_action( 'after_setup_theme', 'sakebox_custom_header_setup' );
 
-if ( ! function_exists( 'twentyfourteen_header_style' ) ) :
+if ( ! function_exists( 'sakebox_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see twentyfourteen_custom_header_setup().
+ * @see sakebox_custom_header_setup().
  *
  */
-function twentyfourteen_header_style() {
+function sakebox_header_style() {
 	$text_color = get_header_textcolor();
 
 	// If no custom color for text is set, let's bail.
@@ -63,7 +63,7 @@ function twentyfourteen_header_style() {
 
 	// If we get this far, we have custom styles.
 	?>
-	<style type="text/css" id="twentyfourteen-header-css">
+	<style type="text/css" id="sakebox-header-css">
 	<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
@@ -85,20 +85,20 @@ function twentyfourteen_header_style() {
 	</style>
 	<?php
 }
-endif; // twentyfourteen_header_style
+endif; // sakebox_header_style
 
 
-if ( ! function_exists( 'twentyfourteen_admin_header_style' ) ) :
+if ( ! function_exists( 'sakebox_admin_header_style' ) ) :
 /**
  * Style the header image displayed on the Appearance > Header screen.
  *
- * @see twentyfourteen_custom_header_setup()
+ * @see sakebox_custom_header_setup()
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_admin_header_style() {
+function sakebox_admin_header_style() {
 ?>
-	<style type="text/css" id="twentyfourteen-admin-header-css">
+	<style type="text/css" id="sakebox-admin-header-css">
 	.appearance_page_custom-header #headimg {
 		background-color: #000;
 		border: none;
@@ -121,17 +121,17 @@ function twentyfourteen_admin_header_style() {
 	</style>
 <?php
 }
-endif; // twentyfourteen_admin_header_style
+endif; // sakebox_admin_header_style
 
-if ( ! function_exists( 'twentyfourteen_admin_header_image' ) ) :
+if ( ! function_exists( 'sakebox_admin_header_image' ) ) :
 /**
  * Create the custom header image markup displayed on the Appearance > Header screen.
  *
- * @see twentyfourteen_custom_header_setup()
+ * @see sakebox_custom_header_setup()
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_admin_header_image() {
+function sakebox_admin_header_image() {
 ?>
 	<div id="headimg">
 		<?php if ( get_header_image() ) : ?>
@@ -141,4 +141,4 @@ function twentyfourteen_admin_header_image() {
 	</div>
 <?php
 }
-endif; // twentyfourteen_admin_header_image
+endif; // sakebox_admin_header_image

@@ -2,7 +2,7 @@
  * Twenty Fourteen keyboard support for image navigation.
  */
 ( function( $ ) {
-	$( document ).on( 'keydown.twentyfourteen', function( e ) {
+	$( document ).on( 'keydown.sakebox', function( e ) {
 		var url = false;
 
 		// Left arrow key code.

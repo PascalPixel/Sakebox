@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyfourteen' ), get_search_query() ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'sakebox' ), get_search_query() ); ?></h1>
 			</header><!-- .page-header -->
 
 				<?php
@@ -31,7 +31,7 @@ get_header(); ?>
 
 					endwhile;
 					// Previous/next post navigation.
-					twentyfourteen_paging_nav();
+					sakebox_paging_nav();
 
 				else :
 					// If no content, include the "No posts found" template.
