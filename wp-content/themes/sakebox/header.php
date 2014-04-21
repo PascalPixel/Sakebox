@@ -9,8 +9,6 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-  <script type="text/javascript" src="//use.typekit.net/swx3vts.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>

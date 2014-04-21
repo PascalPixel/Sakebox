@@ -7,9 +7,16 @@
  * @since _
  */
 
-get_header(); ?>
+get_header();
+$post_image_id = get_post_thumbnail_id($post_to_use->ID);
+if ($post_image_id) {
+  $size = array(2000,1000);
+  $thumbnail = wp_get_attachment_image_src( $post_image_id, $size, false);
+  if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+}
+?>
 
-<div class="hero">
+<div class="hero" style="background:url('<?php echo $thumbnail ?>');background-size:cover;background-repeat:no-repeat;background-position: center center;">
   <div class="container">
   	<div class="row">
   		<div class="col-sm-8 col-md-6 col-lg-5">
@@ -44,27 +51,8 @@ get_header(); ?>
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6">
-		
-		</div>
-		<div class="col-sm-6">
-		  Hi
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6">
-		  Hi
-		</div>
-		<div class="col-sm-6">
-		  Hi
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6">
-		  Hi
-		</div>
-		<div class="col-sm-6">
-		  Hi
+		<div class="col-sm-12">
+		  <?php the_content(); ?>
 		</div>
 	</div>
 </div>
@@ -72,14 +60,8 @@ get_header(); ?>
 <div class="footer">
   <div class="container">
   	<div class="row">
-  		<div class="col-sm-3">
+  		<div class="col-sm-12">
     		© Copyright 2014 Rinkya, LLC
-  		</div>
-  		<div class="col-sm-3">
-  		  
-  		</div>
-  		<div class="col-sm-3">
-  		  
   		</div>
   	</div>
   </div>
