@@ -1,40 +1,32 @@
 <?php
 /**
- * The Template for displaying all single posts
+ * The Template for displaying all single posts.
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package Sakebox
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="main" class="site-main" role="main">
+
+		<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php get_template_part( 'content', 'single' ); ?>
+
+			<?php sakebox_post_nav(); ?>
+
 			<?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
-
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-
-					// Previous/next post navigation.
-					sakebox_post_nav();
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				endwhile;
+				// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || '0' != get_comments_number() ) :
+					comments_template();
+				endif;
 			?>
-		</div><!-- #content -->
+
+		<?php endwhile; // end of the loop. ?>
+
+		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

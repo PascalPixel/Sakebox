@@ -1,27 +1,25 @@
 <?php
 /**
- * The template for displaying the footer
+ * The template for displaying the footer.
  *
- * Contains footer content and the closing of the #main and #page div elements.
+ * Contains the closing of the #content div and all content after
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package Sakebox
  */
 ?>
 
-		</div><!-- #main -->
+	</div><!-- #content -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sakebox' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'sakebox' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'sakebox' ), 'Sakebox', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
 
-			<?php get_sidebar( 'footer' ); ?>
+<?php wp_footer(); ?>
 
-			<div class="site-info">
-				Built by <a href="http://superpencil.com">Superpencil</a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
-
-	<?php wp_footer(); ?>
 </body>
 </html>

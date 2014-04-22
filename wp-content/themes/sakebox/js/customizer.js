@@ -1,8 +1,9 @@
 /**
- * Twenty Fourteen Theme Customizer enhancements for a better user experience.
+ * Theme Customizer enhancements for a better user experience.
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
+
 ( function( $ ) {
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
@@ -24,13 +25,10 @@
 					'position': 'absolute'
 				} );
 			} else {
-				$( '.site-title,  .site-description' ).css( {
+				$( '.site-title, .site-description' ).css( {
 					'clip': 'auto',
-					'position': 'static'
-				} );
-
-				$( '.site-title a' ).css( {
-					'color': to
+					'color': to,
+					'position': 'relative'
 				} );
 			}
 		} );

@@ -1,44 +1,33 @@
 <?php
 /**
- * Implement Custom Header functionality for Twenty Fourteen
+ * Sample implementation of the Custom Header feature
+ * http://codex.wordpress.org/Custom_Headers
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * You can add an optional custom header image to header.php like so ...
+
+	<?php if ( get_header_image() ) : ?>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+	</a>
+	<?php endif; // End header image check. ?>
+
+ *
+ * @package Sakebox
  */
 
 /**
- * Set up the WordPress core custom header settings.
- *
- * @since Twenty Fourteen 1.0
+ * Setup the WordPress core custom header feature.
  *
  * @uses sakebox_header_style()
  * @uses sakebox_admin_header_style()
  * @uses sakebox_admin_header_image()
  */
 function sakebox_custom_header_setup() {
-	/**
-	 * Filter Twenty Fourteen custom-header support arguments.
-	 *
-	 * @since Twenty Fourteen 1.0
-	 *
-	 * @param array $args {
-	 *     An array of custom-header support arguments.
-	 *
-	 *     @type bool   $header_text            Whether to display custom header text. Default false.
-	 *     @type int    $width                  Width in pixels of the custom header image. Default 1260.
-	 *     @type int    $height                 Height in pixels of the custom header image. Default 240.
-	 *     @type bool   $flex_height            Whether to allow flexible-height header images. Default true.
-	 *     @type string $admin_head_callback    Callback function used to style the image displayed in
-	 *                                          the Appearance > Header screen.
-	 *     @type string $admin_preview_callback Callback function used to create the custom header markup in
-	 *                                          the Appearance > Header screen.
-	 * }
-	 */
 	add_theme_support( 'custom-header', apply_filters( 'sakebox_custom_header_args', array(
-		'default-text-color'     => 'fff',
-		'width'                  => 1260,
-		'height'                 => 240,
+		'default-image'          => '',
+		'default-text-color'     => '000000',
+		'width'                  => 1000,
+		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'sakebox_header_style',
 		'admin-head-callback'    => 'sakebox_admin_header_style',
@@ -52,34 +41,35 @@ if ( ! function_exists( 'sakebox_header_style' ) ) :
  * Styles the header image and text displayed on the blog
  *
  * @see sakebox_custom_header_setup().
- *
  */
 function sakebox_header_style() {
-	$text_color = get_header_textcolor();
+	$header_text_color = get_header_textcolor();
 
-	// If no custom color for text is set, let's bail.
-	if ( display_header_text() && $text_color === get_theme_support( 'custom-header', 'default-text-color' ) )
+	// If no custom options for text are set, let's bail
+	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+	if ( HEADER_TEXTCOLOR == $header_text_color ) {
 		return;
+	}
 
-	// If we get this far, we have custom styles.
+	// If we get this far, we have custom styles. Let's do this.
 	?>
-	<style type="text/css" id="sakebox-header-css">
+	<style type="text/css">
 	<?php
 		// Has the text been hidden?
-		if ( ! display_header_text() ) :
+		if ( 'blank' == $header_text_color ) :
 	?>
 		.site-title,
 		.site-description {
-			clip: rect(1px 1px 1px 1px); /* IE7 */
-			clip: rect(1px, 1px, 1px, 1px);
 			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
 		}
 	<?php
-		// If the user has set a custom color for the text, use that.
-		elseif ( $text_color != get_theme_support( 'custom-header', 'default-text-color' ) ) :
+		// If the user has set a custom color for the text use that
+		else :
 	?>
-		.site-title a {
-			color: #<?php echo esc_attr( $text_color ); ?>;
+		.site-title a,
+		.site-description {
+			color: #<?php echo $header_text_color; ?>;
 		}
 	<?php endif; ?>
 	</style>
@@ -87,37 +77,29 @@ function sakebox_header_style() {
 }
 endif; // sakebox_header_style
 
-
 if ( ! function_exists( 'sakebox_admin_header_style' ) ) :
 /**
- * Style the header image displayed on the Appearance > Header screen.
+ * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see sakebox_custom_header_setup()
- *
- * @since Twenty Fourteen 1.0
+ * @see sakebox_custom_header_setup().
  */
 function sakebox_admin_header_style() {
 ?>
-	<style type="text/css" id="sakebox-admin-header-css">
-	.appearance_page_custom-header #headimg {
-		background-color: #000;
-		border: none;
-		max-width: 1260px;
-		min-height: 48px;
-	}
-	#headimg h1 {
-		font-family: Lato, sans-serif;
-		font-size: 18px;
-		line-height: 48px;
-		margin: 0 0 0 30px;
-	}
-	#headimg h1 a {
-		color: #fff;
-		text-decoration: none;
-	}
-	#headimg img {
-		vertical-align: middle;
-	}
+	<style type="text/css">
+		.appearance_page_custom-header #headimg {
+			border: none;
+		}
+		#headimg h1,
+		#desc {
+		}
+		#headimg h1 {
+		}
+		#headimg h1 a {
+		}
+		#desc {
+		}
+		#headimg img {
+		}
 	</style>
 <?php
 }
@@ -125,19 +107,19 @@ endif; // sakebox_admin_header_style
 
 if ( ! function_exists( 'sakebox_admin_header_image' ) ) :
 /**
- * Create the custom header image markup displayed on the Appearance > Header screen.
+ * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see sakebox_custom_header_setup()
- *
- * @since Twenty Fourteen 1.0
+ * @see sakebox_custom_header_setup().
  */
 function sakebox_admin_header_image() {
+	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
+		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		<?php if ( get_header_image() ) : ?>
 		<img src="<?php header_image(); ?>" alt="">
 		<?php endif; ?>
-		<h1 class="displaying-header-text"><a id="name"<?php echo sprintf( ' style="color:#%s;"', get_header_textcolor() ); ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 	</div>
 <?php
 }
