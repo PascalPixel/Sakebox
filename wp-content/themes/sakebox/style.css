@@ -18,10 +18,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* Admin bar move down content if present */
 
 .admin-bar {
-  padding-top: 32px;
+  padding-top: 112px;
 }
 
-.home.admin-bar {
+.home {
   padding-top: 0;
 }
 
@@ -32,19 +32,76 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* General Styling */
 
 body {
-  font-family:"AvenirNextLTW01-Regular";
+  font-family:"AvenirNextLTW01-Regular", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
+  padding-top: 80px;
+  background: #F8F8F8;
 }
 
-h1, h2, strong, b {
-  font-family:"Avenir Next LT W01 Demi";
+a {
+  color: #18b7a6;
+}
+
+.navbar-default {
+  background-color: #FFFFFF;
+  border-color: #E0E0E0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+  background-color: #29d4c2;
+  color: #138e81;
+}
+
+article {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 10px 30px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  background: white;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-family:"Avenir Next LT W01 Demi", sans-serif;
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  text-transform: uppercase;
+  color: black;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus {
+  background: none;
+  color: black;
+  border-bottom: 3px solid black;
+  padding: 30px 0 0;
+  margin: 0 20px;
+}
+
+.navbar-brand img {
+  margin-top: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-fixed-top .navbar-collapse, 
+  .navbar-static-top .navbar-collapse, 
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 .btn {
   border-radius: 8px;
-  font-family:"Avenir Next LT W01 Demi";
+  font-family:"Avenir Next LT W01 Demi", sans-serif;
+  outline: none !important;
 }
 .btn-default,
 .btn-primary,
@@ -52,7 +109,7 @@ h1, h2, strong, b {
 .btn-info,
 .btn-warning,
 .btn-danger {
-  text-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, .2);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 10px rgba(255, 255, 255, .2), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 10px rgba(255, 255, 255, .2), 0 1px 1px rgba(0, 0, 0, .075);
   text-transform: uppercase;
@@ -193,6 +250,7 @@ h1, h2, strong, b {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0px 35px 200px rgba(0,0,0,0.2);
+  z-index: 500;
 }
 .heroback {
   margin-top: -20px;
@@ -201,45 +259,57 @@ h1, h2, strong, b {
   text-shadow:0px 1px 2px rgba(0,0,0,0.3);
   text-align: center;
 }
-.home_header {
-  display: none;
+.heroback h1 {
+  font-family:"Avenir Next LT W01 Bold", sans-serif;
+  letter-spacing: 1.1;
 }
-.home .search-toggle {
+.logoHome {
   display: none;
+  width: 300px;
 }
-@media screen and (min-width: 782px) {
-  .heroback h1 {
-    font-size: 50px;
+@media screen and (min-width: 768px) {
+  .homeHeader {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
   }
-  .heroback {
-    margin: 40px 0 160px;
-  }
-  .home #masthead {
+  .homeHeader .logoNormal {
     display: none;
   }
-  .home .site-main {
-    margin-top: 0;
-  }
-  .home_header {
-    padding: 40px;
-    display: inherit;
-    text-shadow:0px 1px 2px rgba(0,0,0,0.3);
-  }
-  .home_header .logo img {
+  .homeHeader .logoHome {
+    display: block;
     margin-top: -50px;
   }
-  .home ul.menu li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px;
+  .homeHeader .navbar {
+    min-height: 110px;
+  }
+  .homeHeader.navbar-default .navbar-nav>.active>a,
+  .homeHeader .navbar-nav>li>a {
+    padding-top: 45px;
+    font-size: 16px;
+  }
+  .homeHeader.navbar-default .navbar-nav>li>a, 
+  .homeHeader.navbar-default .navbar-nav>li>a:hover, 
+  .homeHeader.navbar-default .navbar-nav>li>a:focus,
+  .homeHeader.navbar-default .navbar-nav>.active>a, 
+  .homeHeader.navbar-default .navbar-nav>.active>a:hover, 
+  .homeHeader.navbar-default .navbar-nav>.active>a:focus {
+    color: white;
+    border-color: white;
+  }
+  .heroback h1 {
+    font-size: 40px;
+  }
+  .heroback {
+    margin: 180px 0;
+  }
+  .home .logo img {
+    margin-top: -50px;
   }
   .home ul.menu li a {
     color: white; 
     text-transform: uppercase;
     font-size: 16px;
-    font-family:"Avenir Next LT W01 Demi";
-  }
-  .home .sub-menu {
-    display: none;
+    font-family:"Avenir Next LT W01 Demi", sans-serif;
   }
 }
