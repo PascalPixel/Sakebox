@@ -23,7 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 	
-    <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top <?php if(is_front_page() ) { ?>homeHeader<?php } ?>" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -33,8 +33,8 @@
         </button>
         
         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-          <img class="logoNormal" src="<?php bloginfo('template_directory'); ?>/img/logo_top.png" />
-          <img class="logoHome" src="<?php bloginfo('template_directory'); ?>/img/logo_w.png" />
+          <img class="logoNormal" src="<?php bloginfo('template_directory'); ?>/img/sakebox_logo_b.png" />
+          <img class="logoHome"   src="<?php bloginfo('template_directory'); ?>/img/sakebox_logo_w.png" />
         </a>
       </div>
       
