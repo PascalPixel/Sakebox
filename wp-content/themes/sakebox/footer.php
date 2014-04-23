@@ -13,28 +13,27 @@
 	<footer class="footer" id="colophon" class="site-footer" role="contentinfo">
 	  <div class="container">
     	<div class="row">
-    	  <div class="col-sm-6">
+    	  <div class="col-sm-12">
       	  <!-- Begin MailChimp Signup Form -->
           <form action="http://superpencil.us7.list-manage1.com/subscribe/post?u=43a0823be5d7c532fa4f7f239&amp;id=65b3ce1c66" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-            <div id="mc_embed_signup">
-              <div class="row">
-                <div class="col-xs-8">
-                	<input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Subscribe to e-mail updates" required="">
-                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_43a0823be5d7c532fa4f7f239_65b3ce1c66" value=""></div>
-                </div>
-                <div class="col-xs-4">
-                	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success">
-                </div>
+            <label>Sign up for our newsletter</label>
+            <div id="mc_embed_signup" class="row">
+              <div class="col-xs-8 col-lg-10">
+              	<input type="email" value="" name="EMAIL" class="email form-control col-sm-8" id="mce-EMAIL" placeholder="Subscribe to e-mail updates" required="">
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_43a0823be5d7c532fa4f7f239_65b3ce1c66" value=""></div>
+              </div>
+              <div class="col-xs-4 col-lg-2">
+              	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-block">
               </div>
             </div>
           </form>
           <!--End mc_embed_signup-->
     	  </div>
-    		<div class="col-sm-6">
+    	</div>
+    	<div class="row">
+    		<div class="col-sm-12">
     		  <div class="site-info">
-      		  © 2014 <a href="http://www.rinkya.com">Rinkya</a>, LLC
-      			<br>
-      			<?php printf( __( 'Theme: %1$s by %2$s.', 'sakebox' ), 'Sakebox', '<a href="http://superpencil.com/" rel="designer">Superpencil.com</a>' ); ?>
+      		  © 2014 <a href="http://www.rinkya.com">Rinkya</a>, LLC | <?php printf( __( 'Theme: %1$s by %2$s.', 'sakebox' ), 'Sakebox', '<a href="http://superpencil.com/" rel="designer">Superpencil.com</a>' ); ?>
       		</div><!-- .site-info -->
     		</div>
     	</div>

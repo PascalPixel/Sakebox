@@ -33,7 +33,7 @@ get_header();
       <?php } ?>
 
       <div class="container">
-      	<div class="row">
+      	<div class="row" style="margin: 60px 0;">
       		<div class="col-sm-8">
 
         		<?php if ( have_posts() ) : ?>
@@ -60,7 +60,7 @@ get_header();
         		<?php endif; ?>
 
       		</div>
-      		<div class="col-sm-8">
+      		<div class="col-sm-4">
       		
         		<?php get_sidebar(); ?>
       		

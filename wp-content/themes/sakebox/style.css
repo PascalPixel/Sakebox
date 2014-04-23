@@ -20,11 +20,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .admin-bar {
   padding-top: 112px;
 }
-
-.home {
-  padding-top: 0;
-}
-
 .admin-bar .navbar-fixed-top {
   top: 32px;
 }
@@ -39,79 +34,262 @@ body {
   padding-top: 80px;
   background: #F8F8F8;
 }
-
 img {
   max-width: 100%;
 }
-
 a {
   color: #18b7a6;
 }
-
 a:hover {
   color: #149689;
 }
-
 .navbar-default {
   background-color: #FFFFFF;
   border-color: #E0E0E0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-family: "Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s; /* Safari */
 }
-
-.footer {
+.footer, .newsbar {
   background-color: #29d4c2;
   color: #138e81;
   overflow: hidden;
   padding: 20px 0;
+  margin-top: 40px;
 }
-
-.footer a, .footer a:hover {
+.newsbar {
+  padding: 20px 0 10px;
   color: white;
 }
-
-article {
+.footer a, .footer a:hover, .newsbar a, .newsbar a:hover {
+  color: white;
+}
+article, aside {
   border: 1px solid #E0E0E0;
   border-radius: 8px;
   padding: 10px 30px 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  margin-top: 20px;
+  margin-bottom: 20px;
   background: white;
 }
-
 h1, h2, h3, h4, h5 {
   font-weight: normal;
   font-family:"Avenir Next LT W01 Demi", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-.navbar-default .navbar-nav>li>a {
-  font-family: "Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  color: black;
-}
-
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:hover, 
-.navbar-default .navbar-nav>.active>a:focus {
-  background: none;
-  color: black;
-  border-bottom: 3px solid black;
-  padding: 30px 0 0;
-  margin: 0 20px;
-}
-
 .navbar-brand img {
   margin-top: -30px;
 }
+.signup-text {
+  font-family: "AvenirNextLTW01-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.search-field {
+  
+}
+
+/* Static Homepage */
+.home {
+  padding-top: 0;
+}
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 35px 200px rgba(0,0,0,0.2);
+  z-index: 500;
+  background-color: #29d4c2;
+}
+.heroback {
+  margin-top: -20px;
+  padding: 40px 20px;
+  color: #ffffff;
+  text-shadow:0px 1px 2px rgba(0,0,0,0.3);
+  text-align: center;
+}
+.heroback h1 {
+  font-family:"Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1.1;
+}
+.imgwrap {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.stepsblock {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  color: white;
+  position: relative;
+}
+.steps1 {
+  background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('img/steps1.jpg');
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))), url('/img/steps1.jpg');
+  background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps1.jpg');
+  background: -o-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps1.jpg');
+  background: -ms-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps1.jpg');
+  background: linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps1.jpg');
+}
+.steps2 {
+  background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('img/steps2.jpg');
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))), url('/img/steps2.jpg');
+  background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps2.jpg');
+  background: -o-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps2.jpg');
+  background: -ms-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps2.jpg');
+  background: linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps2.jpg');
+}
+.steps3 {
+  background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('img/steps3.jpg');
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))), url('/img/steps3.jpg');
+  background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps3.jpg');
+  background: -o-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps3.jpg');
+  background: -ms-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps3.jpg');
+  background: linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('img/steps3.jpg');
+}
+.steps1, .steps2, .steps3 {
+  background-position: center center, center center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+.stepsnumber {
+  background: white;
+  width: 35px;
+  height: 35px;
+  color: black;
+  padding: 4px 0 0 11px;
+  font-size: 20px;
+  border-radius: 35px;
+  font-family:"Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.stepstop {
+  font-size: 20px;
+  text-shadow:0px 1px 2px rgba(0,0,0,0.3);
+  font-family:"Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  margin-top: 50px;
+}
+.stepsbottom {
+  text-shadow:0px 1px 2px rgba(0,0,0,0.3);
+  font-size: 20px;
+  width: 100%;
+}
+.logoNormal, .logoHome {
+  width: 225px;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s; /* Safari */
+  position: absolute;
+  top: 30px;
+}
+.logoHome {
+  opacity: 0;
+}
+.hero {
+  padding-top: 80px;
+}
+.site-info {
+  margin-top: 20px;
+}
+.divider {
+font-family: "Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: center;
+margin-top: 60px;
+margin-bottom: 30px;
+}
+.divider span {
+  background: #F8F8F8;
+  padding: 0 20px;
+  font-size:  16px;
+}
+.divider hr {
+border-top: 3px solid #bbbbbb;
+margin-bottom: -13px;
+margin-top: 0;
+}
 
 @media screen and (min-width: 768px) {
+  .navbar-default .navbar-nav>li>a {
+    font-family: "Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: black;
+  }
+  .navbar-default .navbar-nav>.active>a, 
+  .navbar-default .navbar-nav>.active>a:hover, 
+  .navbar-default .navbar-nav>.active>a:focus {
+    background: none;
+    color: black;
+    border-bottom: 3px solid black;
+    padding: 30px 0 0;
+    margin: 0 20px;
+  }
   .navbar-fixed-top .navbar-collapse, 
   .navbar-static-top .navbar-collapse, 
   .navbar-fixed-bottom .navbar-collapse {
     padding-left: 35px;
     padding-right: 35px;
   }
+  .navbar-default .navbar-nav>li>a:hover, 
+  .navbar-default .navbar-nav>li>a:focus,
+  .navbar-default .navbar-nav>.active>a:hover, 
+  .navbar-default .navbar-nav>.active>a:focus {
+    color: #29d4c2;
+    border-color: #29d4c2;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s; /* Safari */
+  }
+  .homeHeader .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+  }
+  .homeHeader {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .homeHeader .logoNormal {
+    opacity: 0;
+  }
+  .homeHeader .logoHome {
+    opacity: 1;
+  }
+  .homeHeader .navbar {
+    min-height: 110px;
+  }
+  .homeHeader.navbar-default .navbar-nav>.active>a,
+  .homeHeader .navbar-nav>li>a {
+    padding-top: 35px;
+    font-size: 16px;
+    text-shadow:0px 1px 2px rgba(0,0,0,0.3);
+  }
+  .homeHeader.navbar-default .navbar-nav>li>a, 
+  .homeHeader.navbar-default .navbar-nav>li>a:hover, 
+  .homeHeader.navbar-default .navbar-nav>li>a:focus,
+  .homeHeader.navbar-default .navbar-nav>.active>a, 
+  .homeHeader.navbar-default .navbar-nav>.active>a:hover, 
+  .homeHeader.navbar-default .navbar-nav>.active>a:focus {
+    color: white;
+    border-color: white;
+  }
+  .heroback h1 {
+    font-size: 40px;
+  }
+  .heroback {
+    margin: 150px 0 190px;
+  }
+  .home .logo img {
+    margin-top: -50px;
+  }
+  .home ul.menu li a {
+    color: white; 
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family:"Avenir Next LT W01 Demi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 }
 
+/* Button Styling */
 .btn {
   border-radius: 8px;
   font-family:"Avenir Next LT W01 Demi", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -260,103 +438,4 @@ h1, h2, h3, h4, h5 {
 .btn-danger.active {
   background-color: #c12e2a;
   border-color: #7f0808;
-}
-
-/* Static Homepage */
-.hero {
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0px 35px 200px rgba(0,0,0,0.2);
-  z-index: 500;
-}
-.heroback {
-  margin-top: -20px;
-  padding: 40px 20px;
-  color: #ffffff;
-  text-shadow:0px 1px 2px rgba(0,0,0,0.3);
-  text-align: center;
-}
-.heroback h1 {
-  font-family:"Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 1.1;
-}
-.logoNormal, .logoHome {
-  width: 225px;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s; /* Safari */
-  position: absolute;
-  top: 30px;
-}
-.logoHome {
-  opacity: 0;
-}
-.hero {
-  padding-top: 80px;
-}
-.signup-text {
-  font-family: "AvenirNextLTW01-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.navbar-default .navbar-nav>li>a:hover, 
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>.active>a:hover, 
-.navbar-default .navbar-nav>.active>a:focus {
-  color: #29d4c2;
-  border-color: #29d4c2;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s; /* Safari */
-}
-@media screen and (min-width: 768px) {
-  .homeHeader .nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 20px;
-  }
-  .homeHeader {
-    background: none;
-    border-color: transparent;
-    box-shadow: none;
-  }
-  .homeHeader .logoNormal {
-    opacity: 0;
-  }
-  .homeHeader .logoHome {
-    opacity: 1;
-  }
-  .navbar-default {
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s; /* Safari */
-  }
-  .homeHeader .navbar {
-    min-height: 110px;
-  }
-  .homeHeader.navbar-default .navbar-nav>.active>a,
-  .homeHeader .navbar-nav>li>a {
-    padding-top: 35px;
-    font-size: 16px;
-    text-shadow:0px 1px 2px rgba(0,0,0,0.3);
-  }
-  .homeHeader.navbar-default .navbar-nav>li>a, 
-  .homeHeader.navbar-default .navbar-nav>li>a:hover, 
-  .homeHeader.navbar-default .navbar-nav>li>a:focus,
-  .homeHeader.navbar-default .navbar-nav>.active>a, 
-  .homeHeader.navbar-default .navbar-nav>.active>a:hover, 
-  .homeHeader.navbar-default .navbar-nav>.active>a:focus {
-    color: white;
-    border-color: white;
-  }
-  .heroback h1 {
-    font-size: 40px;
-  }
-  .heroback {
-    margin: 150px 0 190px;
-  }
-  .home .logo img {
-    margin-top: -50px;
-  }
-  .home ul.menu li a {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family:"Avenir Next LT W01 Demi", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
 }
