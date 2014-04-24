@@ -34,6 +34,9 @@ body {
   padding-top: 80px;
   background: #F8F8F8;
 }
+.thin {
+  font-family:"AvenirNextLTW01-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 img {
   max-width: 100%;
 }
@@ -206,6 +209,23 @@ margin-bottom: 30px;
 border-top: 2px solid #bbbbbb;
 margin-bottom: -13px;
 margin-top: 0;
+}
+
+.shop-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.shop-item img {
+  margin: 40px auto;
+  max-height: 200px;
+  display: block;
+}
+
+.shop-item .price {
+  top: 10px;
+  left: 20px;
+  position: absolute;
 }
 
 @media screen and (min-width: 768px) {
