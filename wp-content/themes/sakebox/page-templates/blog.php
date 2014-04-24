@@ -1,22 +1,32 @@
 <?php
 /**
- * The main template file.
+ * Template Name: Blog
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package Sakebox
+ * @package _
+ * @subpackage _
+ * @since _
  */
-
-get_header(); 
+ 
+get_header();
 
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
+		  <?php 
+		    if(has_post_thumbnail()) { 
+  		  
+  		  //Get URL for featured image to apply to inline CSS background
+        $post_image_id = get_post_thumbnail_id($post_to_use->ID);
+        if ($post_image_id) {
+          $size = array(2000,1000);
+          $thumbnail = wp_get_attachment_image_src( $post_image_id, $size, false);
+          if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+        }
+		  ?>
+        <div class="hero" style="background:url('<?php echo $thumbnail ?>');background-size:cover;background-repeat:no-repeat;background-position: center center;"></div>
+      <?php } ?>
 
       <div class="container">
       	<div class="row" style="margin: 60px 0;">
@@ -57,4 +67,7 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
+	
+	</div>
+</div>
