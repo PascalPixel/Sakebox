@@ -17,11 +17,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* Admin bar move down content if present */
 
-.admin-bar {
-  padding-top: 112px;
-}
 .admin-bar .navbar-fixed-top {
   top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .navbar-fixed-top {
+    top: 46px;
+  }
 }
 
 /* General Styling */
@@ -45,6 +48,12 @@ a {
 }
 a:hover {
   color: #149689;
+}
+.hero {
+  min-height: 300px;
+}
+.home .hero {
+  min-height: 450px;
 }
 .navbar-default {
   background-color: #FFFFFF;
@@ -103,8 +112,7 @@ h1, h2, h3, h4, h5 {
   background-color: #29d4c2;
 }
 .heroback {
-  margin-top: -20px;
-  padding: 40px 20px;
+  padding: 100px 10px 60px;
   color: #ffffff;
   text-shadow:0px 1px 2px rgba(0,0,0,0.3);
   text-align: center;
@@ -188,9 +196,6 @@ h1, h2, h3, h4, h5 {
 .logoHome {
   opacity: 0;
 }
-.hero {
-  padding-top: 80px;
-}
 .site-info {
   margin-top: 20px;
 }
@@ -211,9 +216,15 @@ margin-bottom: -13px;
 margin-top: 0;
 }
 
+.featured a {
+  color: black;
+  text-decoration: none;
+}
+
 .shop-item {
   margin-bottom: 40px;
   position: relative;
+  background-color: white;
 }
 
 .shop-item img {
@@ -229,12 +240,7 @@ margin-top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: -moz-linear-gradient(45deg,  rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,0.4))), url('/img/steps3.jpg');
-  background: -webkit-linear-gradient(45deg,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.4) 100%);
-  background: -o-linear-gradient(45deg,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.4) 100%);
-  background: -ms-linear-gradient(45deg,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.4) 100%);
-  background: linear-gradient(45deg,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.4) 100%);
+  background: rgba(255,255,255,0.6);
   border-radius: 8px;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s; /* Safari */
@@ -257,6 +263,15 @@ margin-top: 0;
 }
 
 @media screen and (min-width: 768px) {
+  html, body, .home .hero, .home .hero > .container, .home .hero > .container > .row {
+    height: 100%;
+  }
+  .home .heroback {
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+  }
   .navbar-default .navbar-nav>li>a {
     font-family: "Avenir Next LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -322,9 +337,6 @@ margin-top: 0;
   }
   .heroback h1 {
     font-size: 40px;
-  }
-  .heroback {
-    margin: 150px 0 190px;
   }
   .home .logo img {
     margin-top: -50px;

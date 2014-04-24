@@ -9,31 +9,32 @@
  
 get_header();
 
-//Get URL for featured image to apply to inline CSS background
-$post_image_id = get_post_thumbnail_id($post_to_use->ID);
-if ($post_image_id) {
-  $size = array(2000,1000);
-  $thumbnail = wp_get_attachment_image_src( $post_image_id, $size, false);
-  if ($thumbnail) (string)$thumbnail = $thumbnail[0];
-}
-
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
+    
 		  <?php 
 		    if(has_post_thumbnail()) { 
-  		  
   		  //Get URL for featured image to apply to inline CSS background
-        $post_image_id = get_post_thumbnail_id($post_to_use->ID);
+        $post_image_id = get_post_thumbnail_id(38);
         if ($post_image_id) {
           $size = array(2000,1000);
           $thumbnail = wp_get_attachment_image_src( $post_image_id, $size, false);
           if ($thumbnail) (string)$thumbnail = $thumbnail[0];
         }
 		  ?>
-        <div class="hero" style="background:url('<?php echo $thumbnail ?>');background-size:cover;background-repeat:no-repeat;background-position: center center;"></div>
+      <div class="hero" style="background:url('<?php echo $thumbnail ?>');background-size:cover;background-repeat:no-repeat;background-position: center center;">
+        <div class="container">
+        	<div class="row">
+        		<div class="col-sm-12">
+        		  <div class="heroback">
+          		  <h1>Shop for amazing saké straight from Japan</h1>
+        		  </div>
+        		</div>
+        	</div>
+        </div>
+      </div>
       <?php } ?>
 
       <div class="container">
