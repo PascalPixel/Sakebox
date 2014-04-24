@@ -92,28 +92,100 @@ if ($post_image_id) {
   </div>
 	<div class="row">
 		<div class="col-sm-4 col-md-3 col-lg-2">
-  		<div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle1.png"/></div><h5>Hishimasamune</h5><h5 class="thin">超辛口純米酒</h5></div>
+  		<div class="shop-item imgwrap">
+  		  <div class="shop-item-hover">
+    		  <h4 class="price">¥923</h4>
+    		  <div class="shop-item-name">
+    		    <h5>Hishimasamune</h5>
+    		    <h5 class="thin">超辛口純米酒</h5>
+    		  </div>
+  		  </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle1.png"/>
+  		</div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle2.png"/></div><h5>Tea Umeshu</h5><h5 class="thin">お茶入り梅酒</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥923</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Tea Umeshu</h5>
+      		  <h5 class="thin">お茶入り梅酒</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle2.png"/>
+		  </div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle3.png"/></div><h5>Yamahai Daiginjyo</h5><h5 class="thin">山廃大吟醸</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥923</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Yamahai Daiginjyo</h5>
+      		  <h5 class="thin">山廃大吟醸</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle3.png"/>
+		  </div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle4.png"/></div><h5>Nansen</h5><h5 class="thin">南泉</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥923</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Nansen</h5>
+      		  <h5 class="thin">南泉</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle4.png"/>
+		  </div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle5.png"/></div><h5>Hishimasamune</h5><h5 class="thin">超辛口純米酒</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥923</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Hishimasamune</h5>
+      		  <h5 class="thin">超辛口純米酒</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle5.png"/>
+		  </div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle6.png"/></div><h5>Tea Umeshu</h5><h5 class="thin">お茶入り梅酒</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥923</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Tea Umeshu</h5>
+      		  <h5 class="thin">お茶入り梅酒</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle6.png"/>
+		  </div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle7.png"/></div><h5>Yamahai Daiginjyo</h5><h5 class="thin">山廃大吟醸</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥646</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Yamahai Daiginjyo</h5>
+      		  <h5 class="thin">山廃大吟醸</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle7.png"/>
+		  </div>
 		</div>
 		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <div class="shop-item"><div class="imgwrap"><h4 class="price">¥923</h4><img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle8.png"/></div><h5>Nansen</h5><h5 class="thin">南泉</h5></div>
+		  <div class="shop-item imgwrap">
+		    <div class="shop-item-hover">
+    		  <h4 class="price">¥1233</h4>
+    		  <div class="shop-item-name">
+      		  <h5>Nansen</h5>
+      		  <h5 class="thin">南泉</h5>
+    		  </div>
+		    </div>
+  		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle8.png"/>
+		  </div>
 		</div>
 	</div>
 </div>
