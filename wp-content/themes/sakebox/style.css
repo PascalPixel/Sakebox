@@ -74,14 +74,31 @@ a:hover {
 
 .footer {
   background-color: #29d4c2;
-  color: #138e81;
+  color: #0f6960;
   overflow: hidden;
-  padding: 20px 0;
-  margin-top: 40px;
+  padding: 30px 0;
+}
+
+.footer .post {
+  color: #4c6260;
+  padding: 0 20px 10px;
+  line-height: 1.7;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer .post h1 {
+  font-size: 23px;
+}
+
+.footer .post a {
+  color: inherit;
 }
 
 .footer a,.footer a:hover,.newsbar a,.newsbar a:hover {
-  color: white;
+  color: #177e73;
 }
 
 article,aside {
@@ -556,4 +573,28 @@ ul.products a {
   position: absolute;
   top: -10px;
   right: -10px;
+}
+
+.widget-area aside {
+  padding: 10px 20px 30px;
+}
+
+.widget-area aside > h1 {
+  font-size: 18px;
+  display: block;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  margin: -10px -20px 20px;
+  padding: 15px;
+}
+
+.cart_list {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.cart_list > li > a > img {
+max-height: 50px;
+width: auto !important;
+margin-right: 10px;
 }

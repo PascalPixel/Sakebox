@@ -23,7 +23,7 @@
   //Get URL for featured image to apply to inline CSS background
   $post_image_id = get_post_thumbnail_id($post_to_use->ID);
   if ($post_image_id) {
-    $size = array(2000,1000);
+    $size = large;
     $thumbnail = wp_get_attachment_image_src( $post_image_id, $size, false);
     if ($thumbnail) (string)$thumbnail = $thumbnail[0];
   }

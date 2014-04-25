@@ -88,7 +88,7 @@ global $woocommerce;
 			<?php
 				$pay_order_button_text = apply_filters( 'woocommerce_pay_order_button_text', __( 'Pay for order', 'woocommerce' ) );
 				
-				echo apply_filters( 'woocommerce_pay_order_button_html', '<input type="submit" class="button alt" id="place_order" value="' . esc_attr( $pay_order_button_text ) . '" data-value="' . esc_attr( $pay_order_button_text ) . '" />' );
+				echo apply_filters( 'woocommerce_pay_order_button_html', '<input type="submit" class="btn btn-default alt" id="place_order" value="' . esc_attr( $pay_order_button_text ) . '" data-value="' . esc_attr( $pay_order_button_text ) . '" />' );
 			?>			
 			<input type="hidden" name="woocommerce_pay" value="1" />
 		</div>

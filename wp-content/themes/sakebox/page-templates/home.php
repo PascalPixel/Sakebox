@@ -102,15 +102,13 @@ get_header();
 		  <div class="divider"><hr><span><?php _e( 'Recent Products', 'woothemes' ); ?></span></div>
 		</div>
   </div>
-  <div class="row">
-    <div id="content" class="col-full">
-      <div id="main" class="col-left">
-        <div class="product-gallery">
-        	<?php echo do_shortcode( '[recent_products per_page="12" columns="3"]' ); ?>
-        </div><!--/.product-gallery-->
-      </div><!-- /#main -->
-    </div><!-- /#content -->
-	</div>
+  <div id="content" class="col-full">
+    <div id="main" class="col-left">
+      <div class="product-gallery">
+      	<?php echo do_shortcode( '[recent_products per_page="12" columns="3"]' ); ?>
+      </div><!--/.product-gallery-->
+    </div><!-- /#main -->
+  </div><!-- /#content -->
 	
 </div>
 
