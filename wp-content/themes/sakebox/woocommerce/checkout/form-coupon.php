@@ -27,7 +27,7 @@ wc_print_notice( $info_message, 'notice' );
 	</p>
 
 	<p class="form-row form-row-last">
-		<input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+		<input type="submit" class="btn btn-default" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
 	</p>
 
 	<div class="clear"></div>

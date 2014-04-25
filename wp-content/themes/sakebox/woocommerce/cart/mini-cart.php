@@ -33,13 +33,18 @@ global $woocommerce;
 
 					?>
 					<li>
-						<a href="<?php echo get_permalink( $product_id ); ?>">
-							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . $product_name; ?>
-						</a>
-
-						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
-
-						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+					  <div class="row">
+  					  <div class="col-xs-3">
+    						<a href="<?php echo get_permalink( $product_id ); ?>">
+    							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+    						</a>
+  					  </div>
+              <div class="col-xs-9">
+    						<a href="<?php echo get_permalink( $product_id ); ?>"><?php echo $product_name; ?></a>
+    						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
+    						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<br><span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+              </div>
+					  </div>
 					</li>
 					<?php
 				}
@@ -56,14 +61,20 @@ global $woocommerce;
 
 <?php if ( sizeof( WC()->cart->get_cart() ) > 0 ) : ?>
 
-	<p class="total"><strong><?php _e( 'Subtotal', 'woocommerce' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
+	<p class="total"><?php _e( 'Subtotal', 'woocommerce' ); ?>:</p> <h3 style="margin-top:0;"><?php echo WC()->cart->get_cart_subtotal(); ?></h3>
 
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-
-	<p class="buttons">
-		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="btn btn-default btn-sm wc-forward"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
-		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="btn btn-success btn-sm checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
-	</p>
+  
+  <div class="foot">
+  	<div class="row">
+  	  <div class="col-xs-6">
+    		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="btn btn-default btn-sm btn-block wc-forward"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
+  	  </div>
+  	  <div class="col-xs-6">
+    		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="btn btn-success btn-sm btn-block checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
+  	  </div>
+  	</div>
+  </div>
 
 <?php endif; ?>
 

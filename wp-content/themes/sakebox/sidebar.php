@@ -5,7 +5,7 @@
  * @package Sakebox
  */
 ?>
-	<div id="secondary" class="widget-area" role="complementary">
+	<div id="primary" class="widget-area" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
@@ -29,4 +29,4 @@
 			</aside>
 
 		<?php endif; // end sidebar widget area ?>
-	</div><!-- #secondary -->
+	</div><!-- #primary -->

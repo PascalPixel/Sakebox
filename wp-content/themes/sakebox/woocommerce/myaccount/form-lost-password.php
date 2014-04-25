@@ -43,7 +43,7 @@ global $woocommerce, $post;
 
     <div class="clear"></div>
 
-    <p class="form-row"><input type="submit" class="button" name="wc_reset_password" value="<?php echo 'lost_password' == $args['form'] ? __( 'Reset Password', 'woocommerce' ) : __( 'Save', 'woocommerce' ); ?>" /></p>
+    <p class="form-row"><input type="submit" class="btn btn-primary" name="wc_reset_password" value="<?php echo 'lost_password' == $args['form'] ? __( 'Reset Password', 'woocommerce' ) : __( 'Save', 'woocommerce' ); ?>" /></p>
 	<?php wp_nonce_field( $args['form'] ); ?>
 
 </form>
