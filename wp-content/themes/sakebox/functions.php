@@ -134,3 +134,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/wp_bootstrap_navwalker.php';
+
+//WooCommerce Cleanup
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
