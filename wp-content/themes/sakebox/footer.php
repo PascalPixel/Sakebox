@@ -13,21 +13,39 @@
 	<footer class="footer" id="colophon" class="site-footer" role="contentinfo">
 	  <div class="container">
     	<div class="row">
-    	  <div class="col-sm-12">
+    	  <div class="col-sm-6">
       	  <!-- Begin MailChimp Signup Form -->
           <form action="http://superpencil.us7.list-manage1.com/subscribe/post?u=43a0823be5d7c532fa4f7f239&amp;id=65b3ce1c66" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
             <label>Sign up for our newsletter</label>
             <div id="mc_embed_signup" class="row">
-              <div class="col-xs-8 col-lg-10">
+              <div class="col-xs-8">
               	<input type="email" value="" name="EMAIL" class="email form-control col-sm-8" id="mce-EMAIL" placeholder="Subscribe to e-mail updates" required="">
                 <div style="position: absolute; left: -5000px;"><input type="text" name="b_43a0823be5d7c532fa4f7f239_65b3ce1c66" value=""></div>
               </div>
-              <div class="col-xs-4 col-lg-2">
+              <div class="col-xs-4">
               	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-block">
               </div>
             </div>
           </form>
           <!--End mc_embed_signup-->
+    	  </div>
+    	  <div class="col-sm-6">
+    		  Latest Blog Post
+          <?php
+          	$args = array( 'posts_per_page' => 1 );
+          	$loop = new WP_Query( $args );
+          	while ( $loop->have_posts() ) : $loop->the_post();
+          ?>
+            <article <?php post_class(); ?>>
+              <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'content' ) { woo_image( 'width=' . $woo_options['woo_thumb_w'] . '&height=' . $woo_options['woo_thumb_h'] . '&class=thumbnail ' . $woo_options['woo_thumb_align'] ); } ?>
+              <header>
+              	<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+              </header>
+              <section class="entry">
+                <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'content' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+              </section>
+            </article><!-- /.post -->    
+          <?php endwhile; ?>
     	  </div>
     	</div>
     	<div class="row">

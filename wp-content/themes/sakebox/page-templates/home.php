@@ -61,125 +61,57 @@ get_header();
 		  <img class="imgwrap" src="<?php bloginfo('template_directory'); ?>/img/barrels.jpg"/>
 		</div>
 	</div>
+	
 	<div class="row">
 		<div class="col-sm-12">
-		  <div class="divider"><hr><span>Featured Saké</span></div>
+		  <div class="divider"><hr><span><?php _e( 'Featured Products', 'woothemes' ); ?></span></div>
 		</div>
   </div>
-	<div class="row featured">
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-    		<div class="shop-item imgwrap">
-    		  <div class="shop-item-hover">
-      		  <h4 class="price">¥923</h4>
-      		  <div class="shop-item-name">
-      		    <h5>Hishimasamune</h5>
-      		    <h5 class="thin">超辛口純米酒</h5>
-      		  </div>
-    		  </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle1.png"/>
-    		</div>
-		  </a>
+	
+	<div class="row featured-products">
+    <?php
+    $args = array( 'post_type' => 'product', 'posts_per_page' => get_option( 'woo_featured_product_limit' ), 'meta_key' => '_featured', 'meta_value' => 'yes' );
+    $loop = new WP_Query( $args );
+    while ( $loop->have_posts() ) : $loop->the_post(); $_product;
+    if ( function_exists( 'get_product' ) ) {
+    	$_product = get_product( $loop->post->ID );
+    } else {
+    	$_product = new WC_Product( $loop->post->ID );
+    }
+    ?>
+      <div class="col-sm-4 col-md-3 col-lg-2">
+        <?php woocommerce_show_product_sale_flash( $post, $_product ); ?>
+      	<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+          <div class="shop-item imgwrap">
+            <div class="shop-item-hover">
+          	  <h4><span class="price"><?php echo $_product->get_price_html(); ?></span></h4>
+          	  <div class="shop-item-name">
+          	    <h5><?php the_title(); ?></h5>
+          	    <h5 class="thin"><?php do_action( 'woocommerce_after_shop_loop_item' ); ?></h5>
+          	  </div>
+            </div>
+              <?php if ( has_post_thumbnail( $loop->post->ID ) ) echo get_the_post_thumbnail( $loop->post->ID, 'shop_thumbnail' ); else echo '<img src="' . $woocommerce->plugin_url() . '/assets/images/placeholder.png" alt="Placeholder" width="' . wc_get_image_size( 'shop_thumbnail_image_width' ) . 'px" height="' . wc_get_image_size( 'shop_thumbnail_image_height' ) . 'px" />'; ?>
+          </div>
+        </a>
+      </div>
+		<?php endwhile; ?>
+  </div><!--.row-->
+  
+  <div class="row">
+		<div class="col-sm-12">
+		  <div class="divider"><hr><span><?php _e( 'Recent Products', 'woothemes' ); ?></span></div>
 		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥923</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Tea Umeshu</h5>
-        		  <h5 class="thin">お茶入り梅酒</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle2.png"/>
-  		  </div>
-		  </a>
-		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥923</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Yamahai Daiginjyo</h5>
-        		  <h5 class="thin">山廃大吟醸</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle3.png"/>
-  		  </div>
-		  </a>
-		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥923</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Nansen</h5>
-        		  <h5 class="thin">南泉</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle4.png"/>
-  		  </div>
-		  </a>
-		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥923</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Hishimasamune</h5>
-        		  <h5 class="thin">超辛口純米酒</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle5.png"/>
-  		  </div>
-		  </a>
-		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥923</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Tea Umeshu</h5>
-        		  <h5 class="thin">お茶入り梅酒</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle6.png"/>
-  		  </div>
-		  </a>
-		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥646</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Yamahai Daiginjyo</h5>
-        		  <h5 class="thin">山廃大吟醸</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle7.png"/>
-  		  </div>
-		  </a>
-		</div>
-		<div class="col-sm-4 col-md-3 col-lg-2">
-		  <a href="#">
-  		  <div class="shop-item imgwrap">
-  		    <div class="shop-item-hover">
-      		  <h4 class="price">¥1233</h4>
-      		  <div class="shop-item-name">
-        		  <h5>Nansen</h5>
-        		  <h5 class="thin">南泉</h5>
-      		  </div>
-  		    </div>
-    		  <img src="<?php bloginfo('template_directory'); ?>/img/bottles/bottle8.png"/>
-  		  </div>
-		  </a>
-		</div>
+  </div>
+  <div class="row">
+    <div id="content" class="col-full">
+      <div id="main" class="col-left">
+        <div class="product-gallery">
+        	<?php echo do_shortcode( '[recent_products per_page="12" columns="3"]' ); ?>
+        </div><!--/.product-gallery-->
+      </div><!-- /#main -->
+    </div><!-- /#content -->
 	</div>
+	
 </div>
 
 <?php get_footer(); ?>
