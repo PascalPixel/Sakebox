@@ -259,6 +259,16 @@ h1,h2,h3,h4,h5 {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+.comments-area {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 20px;
+  background: white;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
 .stepsblock {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -679,7 +689,7 @@ ul.products a {
 }
 
 .widget-area aside {
-  padding: 10px 20px 0;
+  padding: 10px 20px 20px;
 }
 
 .widget-area aside > h1 {
@@ -691,7 +701,7 @@ ul.products a {
 }
 
 aside .foot {
-  margin: 20px -20px 0;
+  margin: 20px -20px -20px;
   padding: 15px;
   border-top: 1px solid #e0e0e0;
 }
@@ -703,7 +713,9 @@ aside ul {
 }
 
 aside ul li:last-child {
-  border-bottom: none;
+  border-bottom: none;    
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 aside ul li {
