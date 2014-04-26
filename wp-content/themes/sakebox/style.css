@@ -47,6 +47,25 @@ button, input, select, textarea {
   color: black;
 }
 
+p.stars a {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background: rgb(231, 231, 231);
+  color: black;
+  border-radius: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+p.stars a:hover {
+  text-decoration: none;
+}
+
+p.stars a.active {
+  background: rgba(255,230,0,1);
+  color: white;
+}
+
 .thin {
   font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
