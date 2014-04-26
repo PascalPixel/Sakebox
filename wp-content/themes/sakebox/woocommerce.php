@@ -39,15 +39,15 @@ get_header();
 
       <div class="container">
       	<div class="row" style="margin: 60px 0;">
-      		<div class="col-sm-7 col-md-8 col-lg-9">
+      		<div class="col-sm-7 col-md-8">
       		
         		<?php woocommerce_content(); ?>
 
       		</div>
-      		<div class="col-sm-5 col-md-4 col-lg-3">
-      		
-      		  <?php get_sidebar(); ?>
-      		
+      		<div class="col-sm-5 col-md-4">
+      		  <div style="margin-top: 120px;">
+        		  <?php get_sidebar(); ?>
+      		  </div>
       		</div>
       	</div>
       </div>

@@ -46,17 +46,6 @@
             </div>
           </form>
           <!--End mc_embed_signup-->
-          <ul class="footermenu">
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-          </ul>
-    	  </div>
-    	</div>
-    	<div class="row">
-      	<div class="col-sm-12">
     		  <div class="site-info">
       		  © 2014 <a href="http://www.rinkya.com">Rinkya</a>, LLC | <?php printf( __( 'Theme: %1$s by %2$s.', 'sakebox' ), 'Sakebox', '<a href="http://superpencil.com/" rel="designer">Superpencil.com</a>' ); ?>
       		</div><!-- .site-info -->

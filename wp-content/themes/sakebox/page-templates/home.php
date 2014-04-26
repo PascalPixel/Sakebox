@@ -47,27 +47,32 @@ get_header();
 		    </div>
 		  </div>
 		</div>
-	</div>
-  <div class="row">
 		<div class="col-sm-12">
-		  <div class="divider"><hr><span>Extra info of sorts</span></div>
-		</div>
-  </div>
-	<div class="row">
-		<div class="col-sm-6">
-		  <?php the_content(); ?>
-		</div>
-		<div class="col-sm-6">
-		  <img class="imgwrap" src="<?php bloginfo('template_directory'); ?>/img/barrels.jpg"/>
+		  <div class="howitworks">
+    	  <!-- Begin MailChimp Signup Form -->
+        <form action="http://superpencil.us7.list-manage1.com/subscribe/post?u=43a0823be5d7c532fa4f7f239&amp;id=65b3ce1c66" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+          <div id="mc_embed_signup" class="row">
+            <div          class="col-sm-5">
+            	<h4>Get notified when we launch</h4>
+            </div>
+            <div class="col-xs-8 col-sm-4 col-md-5">
+            	<input type="email" value="" name="EMAIL" class="email form-control col-sm-8" id="mce-EMAIL" placeholder="Your e-mail" required="">
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_43a0823be5d7c532fa4f7f239_65b3ce1c66" value=""></div>
+            </div>
+            <div class="col-xs-4 col-sm-3 col-md-2">
+            	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-block">
+            </div>
+          </div>
+        </form>
+        <!--End mc_embed_signup-->
+		  </div>
 		</div>
 	</div>
-	
 	<div class="row">
 		<div class="col-sm-12">
 		  <div class="divider"><hr><span><?php _e( 'Featured Products', 'woothemes' ); ?></span></div>
 		</div>
   </div>
-	
 	<div class="row featured-products">
     <?php
     $args = array( 'post_type' => 'product', 'posts_per_page' => get_option( 'woo_featured_product_limit' ), 'meta_key' => '_featured', 'meta_value' => 'yes' );
@@ -96,7 +101,6 @@ get_header();
       </div>
 		<?php endwhile; ?>
   </div><!--.row-->
-  
   <div class="row">
 		<div class="col-sm-12">
 		  <div class="divider"><hr><span><?php _e( 'Recent Products', 'woothemes' ); ?></span></div>
@@ -109,7 +113,6 @@ get_header();
       </div><!--/.product-gallery-->
     </div><!-- /#main -->
   </div><!-- /#content -->
-	
 </div>
 
 <?php get_footer(); ?>

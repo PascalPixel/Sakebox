@@ -5,15 +5,34 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	<?php if ( has_post_thumbnail() ) { ?>
+	<header class="entry-header entry-header-thumbnail">
+	  <?php 
+	    $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),’thumbnail’ );
+      echo '<img width="100%" src="' . $image_src[0] . '">';
+    ?>
+    <div class="overlay">
+      <div class="holdert">
+    		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+    		<?php if ( 'post' == get_post_type() ) : ?>
+    		<div class="entry-meta">
+    			<?php sakebox_posted_on(); ?>
+    		</div><!-- .entry-meta -->
+    		<?php endif; ?>
+      </div>
+    </div>
+	</header><!-- .entry-header -->
+	<?php } else { ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php sakebox_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
+	<?php } ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">

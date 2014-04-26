@@ -68,10 +68,10 @@ global $woocommerce;
   <div class="foot">
   	<div class="row">
   	  <div class="col-xs-6">
-    		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="btn btn-default btn-sm btn-block wc-forward"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
+    		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="btn btn-default btn-block wc-forward"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
   	  </div>
   	  <div class="col-xs-6">
-    		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="btn btn-success btn-sm btn-block checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
+    		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="btn btn-success btn-block checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
   	  </div>
   	</div>
   </div>
