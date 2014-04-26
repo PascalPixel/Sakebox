@@ -15,7 +15,7 @@ get_header();
 		<main id="main" class="site-main" role="main">
     
 		  <?php 
-		    if(has_post_thumbnail()) { 
+		    if(is_page(38)) { 
   		  //Get URL for featured image to apply to inline CSS background
         $post_image_id = get_post_thumbnail_id(38);
         if ($post_image_id) {
@@ -38,16 +38,16 @@ get_header();
       <?php } ?>
 
       <div class="container">
-      	<div class="row" style="margin: 60px 0;">
+      	<div class="row">
       		<div class="col-sm-7 col-md-8">
       		
         		<?php woocommerce_content(); ?>
 
       		</div>
       		<div class="col-sm-5 col-md-4">
-      		  <div style="margin-top: 120px;">
-        		  <?php get_sidebar(); ?>
-      		  </div>
+      		
+      		  <?php get_sidebar(); ?>
+      		  
       		</div>
       	</div>
       </div>

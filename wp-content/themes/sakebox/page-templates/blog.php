@@ -29,7 +29,7 @@ get_header();
       <?php } ?>
 
       <div class="container">
-      	<div class="row" style="margin: 60px 0;">
+      	<div class="row">
       		<div class="col-sm-8">
 
         		<?php if ( have_posts() ) : ?>

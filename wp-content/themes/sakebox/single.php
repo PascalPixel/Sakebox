@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
       <div class="container">
-      	<div class="row" style="margin: 60px 0;">
+      	<div class="row">
       		<div class="col-sm-8">
 
         		<?php while ( have_posts() ) : the_post(); ?>

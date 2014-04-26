@@ -26,7 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 }
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<div class="row">
+
+  <div class="col-sm-6">
 
 	<?php
 		/**
@@ -37,7 +41,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
-
+	
+  </div>
+  <div class="col-sm-6">
+	
 	<div class="summary entry-summary">
 
 		<?php
@@ -56,6 +63,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		?>
 
 	</div><!-- .summary -->
+	
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
 
 	<?php
 		/**
@@ -69,6 +81,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
-</div><!-- #product-<?php the_ID(); ?> -->
+</div>
+
+</article><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

@@ -38,7 +38,7 @@
     		  <br>
     		  <div class="row">
     		    <div class="col-xs-6">
-    		      <button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#subscribe">Subscribe</button>
+    		      <button class="btn btn-lg btn-primary pull-right" data-toggle="modal" data-target="#subscribe">Subscribe</button>
     		    </div>
     		    <div class="col-xs-6">
     		      <a class="btn btn-lg btn-success pull-left" href="/shop">Shop now</a>

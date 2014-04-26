@@ -31,7 +31,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
-  padding-top: 80px;
+  padding-top: 100px;
   background: #f8f8f8;
 }
 
@@ -61,19 +61,11 @@ img {
 }
 
 a {
-  color: #18b7a6;
+  color: #68B4AC;
 }
 
 a:hover {
   color: #149689;
-}
-
-.hero {
-  min-height: 300px;
-}
-
-.home .hero {
-  min-height: 450px;
 }
 
 .navbar-default {
@@ -87,10 +79,11 @@ a:hover {
 }
 
 .footer {
-  background-color: #29d4c2;
-  color: #0f6960;
+  background-color: #7ACFC6;
+  color: #40706B;
   overflow: hidden;
   padding: 30px 0;
+  margin-top: 20px;
 }
 
 .footer .post {
@@ -223,11 +216,20 @@ h1,h2,h3,h4,h5 {
 }
 
 .hero {
+  min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 35px 200px rgba(0,0,0,0.2);
   z-index: 500;
-  background-color: #29d4c2;
+  background-color: #7ACFC6;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.home .hero {
+  min-height: 450px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .heroback {
@@ -240,11 +242,18 @@ h1,h2,h3,h4,h5 {
 .heroback h1 {
   font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
   letter-spacing: 1.1;
+  font-weight: normal;
+}
+
+.heroback h3 {
+  font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1.1;
+  font-weight: normal;
 }
 
 .howitworks {
-  background-color: #29d4c2;
-  color: #0f6960;
+  background-color: #7ACFC6;
+  color: #40706B;
   padding: 20px;
   border-radius: 8px;
 }
@@ -257,16 +266,6 @@ h1,h2,h3,h4,h5 {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.comments-area {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  padding: 20px;
-  background: white;
-  margin-top: 20px;
-  overflow: hidden;
 }
 
 .stepsblock {
@@ -361,7 +360,7 @@ h1,h2,h3,h4,h5 {
   margin-bottom: 30px;
 }
 
-.divider span {
+.divider > span {
   background: #f8f8f8;
   padding: 0 20px;
   font-size: 16px;
@@ -371,95 +370,6 @@ h1,h2,h3,h4,h5 {
   border-top: 2px solid #bbb;
   margin-bottom: -13px;
   margin-top: 0;
-}
-
-@media screen and (min-width:768px) {
-  html,body,.home .hero,.home .hero>.container,.home .hero>.container>.row {
-    height: 100%;
-  }
-
-  .home .heroback {
-    padding: 0;
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-  }
-
-  .navbar-default .navbar-nav>li>a {
-    font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
-    color: black;
-  }
-
-  .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
-    background: 0;
-    color: black;
-    border-bottom: 3px solid black;
-    padding: 30px 0 0;
-    margin: 0 20px;
-  }
-
-  .navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-
-  .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
-    color: #29d4c2;
-    border-color: #29d4c2;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-  }
-
-  .homeHeader .nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 20px;
-  }
-
-  .homeHeader {
-    background: 0;
-    border-color: transparent;
-    box-shadow: none;
-  }
-
-  .homeHeader .logoNormal {
-    opacity: 0;
-  }
-
-  .homeHeader .logoHome {
-    opacity: 1;
-  }
-
-  .homeHeader .navbar {
-    min-height: 110px;
-  }
-
-  .homeHeader.navbar-default .navbar-nav>.active>a,.homeHeader .navbar-nav>li>a {
-    padding-top: 35px;
-    font-size: 16px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  }
-
-  .homeHeader.navbar-default .navbar-nav>li>a,.homeHeader.navbar-default .navbar-nav>li>a:hover,.homeHeader.navbar-default .navbar-nav>li>a:focus,.homeHeader.navbar-default .navbar-nav>.active>a,.homeHeader.navbar-default .navbar-nav>.active>a:hover,.homeHeader.navbar-default .navbar-nav>.active>a:focus {
-    color: white;
-    border-color: white;
-  }
-
-  .heroback h1 {
-    font-size: 40px;
-  }
-
-  .home .logo img {
-    margin-top: -50px;
-  }
-
-  .home ul.menu li a {
-    color: white;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
-  }
 }
 
 /* Button Styling */
@@ -530,8 +440,8 @@ h1,h2,h3,h4,h5 {
 }
 
 .btn-success {
-  background-image: -webkit-linear-gradient(top,#29d4c2 0,#18b7a6 100%);
-  background-image: linear-gradient(to bottom,#29d4c2 0,#18b7a6 100%);
+  background-image: -webkit-linear-gradient(top,#7ACFC6 0,#68B4AC 100%);
+  background-image: linear-gradient(to bottom,#7ACFC6 0,#68B4AC 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff29d4c2',endColorstr='#ff18b7a6',GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
@@ -539,12 +449,12 @@ h1,h2,h3,h4,h5 {
 }
 
 .btn-success:hover,.btn-success:focus {
-  background-color: #18b7a6;
+  background-color: #68B4AC;
   background-position: 0 -15px;
 }
 
 .btn-success:active,.btn-success.active {
-  background-color: #18b7a6;
+  background-color: #68B4AC;
   border-color: #0f8e82;
 }
 
@@ -658,12 +568,15 @@ ul.products a {
 .shop-item .price {
   top: 20px;
   left: 20px;
+  right: 0;
+  bottom: 0px;
   position: absolute;
 }
 
 .shop-item-name {
   bottom: 10px;
   left: 20px;
+  right: 20px;
   position: absolute;
 }
 
@@ -677,7 +590,7 @@ ul.products a {
 }
 
 .onsale {
-  background: #29d4c2;
+  background: #7ACFC6;
   border: 1px solid #24b7a8;
   padding: 6px 8px;
   color: white;
@@ -688,11 +601,48 @@ ul.products a {
   right: -10px;
 }
 
-.widget-area aside {
+#respond {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 20px;
+  background: white;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#respond h3 {
+  font-size: 18px;
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+  margin: -10px -20px 20px;
+  padding: 5px 15px 15px;
+}
+
+p.logged-in-as {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.form-allowed-tags, .comment-form-comment label {
+  display: none;
+}
+
+textarea#comment {
+width: 100%;
+border: 1px solid #e0e0e0;
+outline: none;
+border-radius: 8px;
+box-shadow: inset 0px 1px 3px #e0e0e0;
+}
+
+aside {
   padding: 10px 20px 20px;
 }
 
-.widget-area aside > h1 {
+aside > h1 {
   font-size: 18px;
   display: block;
   border-bottom: 1px solid #e0e0e0;
@@ -712,12 +662,6 @@ aside ul {
   padding: 0;
 }
 
-aside ul li:last-child {
-  border-bottom: none;    
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 aside ul li {
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
@@ -729,3 +673,284 @@ aside ul li img {
   width: auto !important;
   margin-right: 10px;
 }
+
+aside ul li:last-child {
+  border-bottom: none;    
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+aside ul.cart_list li:last-child {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+aside .total {
+  margin-top: 20px;
+}
+
+ol.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol.comment-list .children {
+  list-style: none;
+}
+
+footer.comment-meta {
+  margin: -10px -30px 20px;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+div.comment-metadata {
+  float: right;
+  margin-top: -25px;
+}
+
+img.avatar {
+  border-radius: 500px;
+}
+
+div.reply {
+  margin: -10px -30px 0 0;
+  padding: 10px 20px;
+  float: right;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-left: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+}
+
+div.reply:hover {
+  background-color: #68B4AC;
+  border-color: #68B4AC;
+}
+
+div.reply:hover a {
+  color: white;
+  text-decoration: none;
+}
+
+#respond input#submit {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #5cb85c;
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 8px;
+  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+  outline: none !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 10px rgba(255,255,255,.2),0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 10px rgba(255,255,255,.2),0 1px 1px rgba(0,0,0,.075);
+  background-image: -webkit-linear-gradient(top,#7ACFC6 0,#68B4AC 100%);
+  background-image: linear-gradient(to bottom,#7ACFC6 0,#68B4AC 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff29d4c2',endColorstr='#ff18b7a6',GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #10a797;
+  margin-bottom: -10px;
+}
+
+#respond input#submit:hover, #respond input#submit:focus {
+  color: #333;
+  text-decoration: none;
+  color: #fff;
+  background-color: #47a447;
+  border-color: #398439;
+  text-shadow: none;
+  background-color: #68B4AC;
+  background-position: 0 -15px;
+}
+
+#respond input#submit:active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  background-image: none;
+  background-color: #68B4AC;
+  border-color: #0f8e82;
+}
+
+.post-navigation .nav-links {
+  content: " ";
+  display: table;
+  width: 100%;
+}
+
+.post-navigation .nav-links .nav-next {
+  float: right;
+}
+
+.post-navigation .nav-links .nav-previous {
+  float: left;
+}
+
+/* Cart */
+
+.cart .remove {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.cart .cart_item {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 -30px;
+  padding: 30px 0 10px;
+}
+
+.cart .cart_item .wp-post-image {
+  max-height: 60px;
+  width: auto;
+  height: auto;
+}
+
+.cart .cart_item .quantity input {
+  max-width: 50px;
+}
+
+.woocommerce .woocommerce-result-count {
+  width: 50%;
+  float: left;
+}
+
+.woocommerce .woocommerce_ordering, .woocommerce .woocommerce-ordering {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+.woocommerce .products {
+  margin-top: 60px;
+  clear: both;
+}
+
+@media screen and (max-width:768px) {
+
+  article, aside {
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    padding: 10px 30px 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+}
+
+@media screen and (min-width:768px) {
+  html,body,.home .hero,.home .hero>.container,.home .hero>.container>.row {
+    height: 100%;
+  }
+
+  .home .heroback {
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+    font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
+    background: 0;
+    color: black;
+    border-bottom: 3px solid black;
+    padding: 30px 0 0;
+    margin: 0 20px;
+  }
+
+  .navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
+    color: #7ACFC6;
+    border-color: #7ACFC6;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+  }
+
+  .homeHeader .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .homeHeader {
+    background: 0;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .homeHeader .logoNormal {
+    opacity: 0;
+  }
+
+  .homeHeader .logoHome {
+    opacity: 1;
+  }
+
+  .homeHeader .navbar {
+    min-height: 110px;
+  }
+
+  .homeHeader.navbar-default .navbar-nav>.active>a,.homeHeader .navbar-nav>li>a {
+    padding-top: 35px;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .homeHeader.navbar-default .navbar-nav>li>a,.homeHeader.navbar-default .navbar-nav>li>a:hover,.homeHeader.navbar-default .navbar-nav>li>a:focus,.homeHeader.navbar-default .navbar-nav>.active>a,.homeHeader.navbar-default .navbar-nav>.active>a:hover,.homeHeader.navbar-default .navbar-nav>.active>a:focus {
+    color: white;
+    border-color: white;
+  }
+
+  .heroback h1 {
+    font-size: 40px;
+  }
+
+  .home .logo img {
+    margin-top: -50px;
+  }
+
+  .home ul.menu li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+}
+
+/* For Glory */.superpencil>img{width: 16px;vertical-align: middle;}
