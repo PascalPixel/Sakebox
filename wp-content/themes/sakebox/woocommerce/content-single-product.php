@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div class="row">
 
-  <div class="col-sm-6">
+  <div class="col-sm-4">
 
 	<?php
 		/**
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	?>
 	
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-8">
 	
 	<div class="summary entry-summary">
 
@@ -63,11 +63,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		?>
 
 	</div><!-- .summary -->
-	
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
 
 	<?php
 		/**

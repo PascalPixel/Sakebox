@@ -35,7 +35,7 @@ body {
   background: #f8f8f8;
 }
 
-button, html input {
+button, input, select, textarea {
   background: white;
   outline: none;
   border: 1px solid #e0e0e0;
@@ -51,8 +51,8 @@ button, html input {
   font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-strong, b {
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+label, th, strong, b {
+  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal;
 }
 
@@ -540,8 +540,9 @@ ul.products a {
 
 .shop-item img {
   margin: 40px auto;
-  max-height: 200px;
+  height: 200px;
   display: block;
+  width: auto;
 }
 
 .shop-item-hover {
@@ -583,10 +584,49 @@ ul.products a {
 .price del .amount {
   color: #bebebe;
   font-size: 12px;
+  text-decoration: line-through;
+}
+
+.shop-item-hover .price del .amount {
   position: absolute;
   top:30px;
   left:0;
-  text-decoration: line-through;
+}
+
+.single-product .qty {
+  max-width: 60px;
+}
+
+.single-product .quantity.buttons_added {
+  float: left;
+  margin-right: 10px;
+}
+
+.single-product  .entry-title {
+  border-bottom: none;
+}
+
+.single-product article img.attachment-shop_thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  height: auto !important;
+  width: auto !important;
+  border: 1px solid rgb(179, 179, 179);
+  margin: 0 10px 10px 0;
+  border-radius: 8px;
+}
+
+.single-product article .price .amount {
+  font-size: 22px;
+  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.pp_woocommerce .ppt {
+  display: none !important;
+}
+
+.pp_woocommerce .pp_content_container {
+  padding-bottom: 0 !important;
 }
 
 .onsale {
@@ -672,6 +712,11 @@ aside ul li img {
   max-height: 50px;
   width: auto !important;
   margin-right: 10px;
+}
+
+aside ul li .row img {
+  margin: 0 auto;
+  display: block;
 }
 
 aside ul li:last-child {
@@ -848,6 +893,82 @@ div.reply:hover a {
 .woocommerce .products {
   margin-top: 60px;
   clear: both;
+}
+
+.single-product article .onsale {
+  left: 0;
+  right: inherit;
+  top: 5px;
+}
+
+.single-product article .images .woocommerce-main-image img {
+  margin: 30px auto;
+  display: block;  
+  height: auto;
+  width: auto;
+}
+
+.single-product article form.cart, .single-product article .product_meta {
+  margin-bottom: 20px;
+}
+
+.single-product article h2 {
+  font-size: 18px;
+}
+
+/* Woocommerce notifications */
+.woocommerce-error {
+  list-style: none;
+  margin: 10px 0;
+  padding: 5px 10px;
+  background: rgb(182, 59, 59);
+  color: white;
+  border-radius: 4px;
+  border: 1px solid rgba(141,34,34,1);
+}
+
+.woocommerce-info {
+  list-style: none;
+  margin: 10px 0;
+  padding: 5px 10px;
+  background: #FFFCED;
+  color: #A7A18A;
+  border-radius: 4px;
+  border: 1px solid #ECE3BC;
+}
+
+.form-row {
+width: 100%;
+clear: both;
+}
+
+.form-row .input-text {
+width: 60%;
+float: right;
+margin-bottom: 10px;
+}
+
+.form-row label {
+width: 40%;
+float: left;
+}
+
+div.create-account {
+clear: both;
+}
+
+ul.payment_methods.methods {
+list-style: none;
+padding: 0;
+}
+
+ul.payment_methods.methods li {
+background: rgb(215, 235, 247);
+padding: 10px;
+margin-top: 20px;
+border: 1px solid rgb(206, 206, 233);
+border-radius: 8px;
+margin-bottom: 10px;
 }
 
 @media screen and (max-width:768px) {
