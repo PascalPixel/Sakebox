@@ -14,7 +14,7 @@ global $woocommerce;
 $order = new WC_Order( $order_id );
 ?>
 <h2><?php _e( 'Order Details', 'woocommerce' ); ?></h2>
-<table class="shop_table order_details">
+<table class="shop_table order_details table table-bordered">
 	<thead>
 		<tr>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>

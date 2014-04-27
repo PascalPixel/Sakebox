@@ -15,7 +15,7 @@ get_header();
 		<main id="main" class="site-main" role="main">
     
 		  <?php 
-		    if(is_page(38)) { 
+		    if(is_shop()) { 
   		  //Get URL for featured image to apply to inline CSS background
         $post_image_id = get_post_thumbnail_id(38);
         if ($post_image_id) {

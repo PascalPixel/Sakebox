@@ -13,7 +13,7 @@ global $woocommerce;
 ?>
 <form id="order_review" method="post">
 
-	<table class="shop_table">
+	<table class="shop_table table table-bordered">
 		<thead>
 			<tr>
 				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>

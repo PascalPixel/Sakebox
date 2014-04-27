@@ -31,7 +31,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
-  padding-top: 100px;
+  padding-top: 120px;
   background: #f8f8f8;
 }
 
@@ -241,7 +241,7 @@ h1,h2,h3,h4,h5 {
   box-shadow: inset 0 35px 200px rgba(0,0,0,0.2);
   z-index: 500;
   background-color: #7ACFC6;
-  margin-top: -20px;
+  margin-top: -40px;
   margin-bottom: 20px;
 }
 
@@ -894,14 +894,21 @@ div.reply:hover a {
 }
 
 .cart .row:last-child {
-  margin-top: 20px;
+border-bottom: none;
 }
 
-.cart .coupon {
+.woocommerce-cart .woocommerce .actions {
+border-bottom: 1px solid #e0e0e0;
+border-top: 1px solid #e0e0e0;
+padding: 20px 30px 20px;
+margin-bottom: 30px;
+margin-left: -30px;
+margin-right: -30px;
+}
+
+.woocommerce-cart .woocommerce .actions .coupon {
 float: left;
-margin-right: 10px;
-padding-right: 10px;
-border-right: 1px solid rgb(209, 209, 209);
+margin-right: 20px;
 }
 
 .cart .cart_item .quantity input {
@@ -971,10 +978,36 @@ width: 100%;
 clear: both;
 }
 
-.form-row .input-text {
+.form-row .input-text, .form-row select {
 width: 60%;
 float: right;
 margin-bottom: 10px;
+}
+
+.woocommerce-checkout .form-row .chosen-container {
+width: 60% !important;
+}
+
+input#createaccount {
+position: absolute;
+margin-top: 14px;
+}
+
+input#ship-to-different-address-checkbox {
+position: absolute;
+margin-top: -29px;
+}
+
+#ship-to-different-address label {
+font-size: 18px;
+}
+
+h3#order_review_heading {
+clear: both;
+}
+
+div.woocommerce-shipping-fields {
+clear: both;
 }
 
 .form-row label {
