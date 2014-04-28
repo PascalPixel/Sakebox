@@ -12,22 +12,10 @@ Domain Path: /languages/
 Tags:
 */
 
-/* Admin bar move down content if present */
-
-.admin-bar .navbar-fixed-top {
-  top: 32px;
-}
-
-@media screen and (max-width:782px) {
-  .admin-bar .navbar-fixed-top {
-    top: 46px;
-  }
-}
-
 /* Global Style */
 
 body {
-  font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Avenir Next W01',"Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
@@ -53,7 +41,6 @@ p.stars a {
   background: rgb(231, 231, 231);
   color: black;
   border-radius: 20px;
-  font-family: sans-serif;
   font-weight: bold;
 }
 
@@ -67,12 +54,7 @@ p.stars a.active {
 }
 
 .thin {
-  font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-label, th, strong, b {
-  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 img {
@@ -91,7 +73,7 @@ a:hover {
   background-color: #fff;
   border-color: #e0e0e0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
   transition: all .5s;
   -webkit-transition: all .5s;
@@ -137,16 +119,15 @@ article,aside {
 }
 
 h1,h2,h3,h4,h5 {
-  font-weight: normal;
-  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
 }
 
 .navbar-brand img {
-  margin-top: -30px;
+  margin-top: -24px;
 }
 
 .signup-text {
-  font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
 }
 
 /* Post styling */
@@ -252,20 +233,18 @@ h1,h2,h3,h4,h5 {
 }
 
 .heroback {
-  padding: 100px 10px 60px;
+  padding: 120px 10px 60px;
   color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
   text-align: center;
 }
 
 .heroback h1 {
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
   letter-spacing: 1.1;
-  font-weight: normal;
+  font-weight: 800;
 }
 
 .heroback h3 {
-  font-family: "AvenirNextLTW01-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
   letter-spacing: 1.1;
   font-weight: normal;
 }
@@ -339,13 +318,13 @@ h1,h2,h3,h4,h5 {
   padding: 4px 0 0 11px;
   font-size: 20px;
   border-radius: 35px;
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 800;
 }
 
 .stepstop {
   font-size: 20px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
   width: 100%;
   margin-top: 50px;
 }
@@ -357,7 +336,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .logoNormal,.logoHome {
-  width: 225px;
+  width: 135px;
   transition: opacity .5s;
   -webkit-transition: opacity .5s;
   position: absolute;
@@ -373,7 +352,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .divider {
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 800;
   text-align: center;
   margin-top: 60px;
   margin-bottom: 30px;
@@ -395,7 +374,7 @@ h1,h2,h3,h4,h5 {
 
 .btn {
   border-radius: 8px;
-  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
   outline: none !important;
 }
 
@@ -637,7 +616,7 @@ ul.products a {
 
 .single-product article .price .amount {
   font-size: 22px;
-  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
 }
 
 .pp_woocommerce .ppt {
@@ -653,7 +632,7 @@ ul.products a {
   border: 1px solid #24b7a8;
   padding: 6px 8px;
   color: white;
-  font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
   border-radius: 8px;
   position: absolute;
   top: -10px;
@@ -784,7 +763,6 @@ div.reply {
   padding: 10px 20px;
   float: right;
   font-weight: bold;
-  font-family: sans-serif;
   border-left: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
   border-top-left-radius: 8px;
@@ -827,7 +805,7 @@ div.reply:hover a {
   padding-left: 0;
   padding-right: 0;
   border-radius: 8px;
-  font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
   outline: none !important;
   text-shadow: 0 2px 3px rgba(0,0,0,.2);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 10px rgba(255,255,255,.2),0 1px 1px rgba(0,0,0,.075);
@@ -879,7 +857,6 @@ div.reply:hover a {
 .cart .remove {
   font-size: 20px;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 .cart .cart_item {
@@ -931,6 +908,11 @@ margin-right: 20px;
   clear: both;
 }
 
+.home .woocommerce .products {
+  margin-top: 0;
+}
+
+
 .single-product article .onsale {
   left: 0;
   right: inherit;
@@ -974,80 +956,95 @@ margin-right: 20px;
 }
 
 .form-row {
-width: 100%;
-clear: both;
+  width: 100%;
+  clear: both;
 }
 
 .form-row .input-text, .form-row select {
-width: 60%;
-float: right;
-margin-bottom: 10px;
+  width: 60%;
+  float: right;
+  margin-bottom: 10px;
 }
 
 .woocommerce-checkout .form-row .chosen-container {
-width: 60% !important;
+  width: 60% !important;
 }
 
 input#createaccount {
-position: absolute;
-margin-top: 14px;
+  position: absolute;
+  margin-top: 14px;
 }
 
 input#ship-to-different-address-checkbox {
-position: absolute;
-margin-top: -29px;
+  position: absolute;
+  margin-top: -29px;
 }
 
 #ship-to-different-address label {
-font-size: 18px;
+  font-size: 18px;
 }
 
 h3#order_review_heading {
-clear: both;
+  clear: both;
 }
 
 div.woocommerce-shipping-fields {
-clear: both;
+  clear: both;
 }
 
 .form-row label {
-width: 40%;
-float: left;
+  width: 40%;
+  float: left;
 }
 
 div.create-account {
-clear: both;
+  clear: both;
 }
 
 ul.payment_methods.methods {
-list-style: none;
-padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul.payment_methods.methods li {
-background: rgb(215, 235, 247);
-padding: 10px;
-margin-top: 20px;
-border: 1px solid rgb(206, 206, 233);
-border-radius: 8px;
-margin-bottom: 10px;
+  background: rgb(215, 235, 247);
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid rgb(206, 206, 233);
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width:768px) {
+.footer aside {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
 
-  article, aside {
-    border: 1px solid #e0e0e0;
-    border-left: none;
-    border-right: none;
-    border-radius: 0px;
-    padding: 10px 30px 30px;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  
+.footer .widget-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+  color: #40706B;
+  background-color: #7ACFC6;
+}
+
+.dropdown-menu>li>a {
+  text-transform: none;
+  font-weight: bold;
 }
 
 @media screen and (min-width:768px) {
+
+  .dropdown-menu {
+    border-color: transparent;
+  }
+
   html,body,.home .hero,.home .hero>.container,.home .hero>.container>.row {
     height: 100%;
   }
@@ -1060,7 +1057,7 @@ margin-bottom: 10px;
   }
 
   .navbar-default .navbar-nav>li>a {
-    font-family: "Avenir Next LT W01 Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 800;
     text-transform: uppercase;
     color: black;
   }
@@ -1085,12 +1082,6 @@ margin-bottom: 10px;
     -webkit-transition: all .2s;
   }
 
-  .homeHeader .nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 20px;
-  }
-
   .homeHeader {
     background: 0;
     border-color: transparent;
@@ -1110,9 +1101,13 @@ margin-bottom: 10px;
   }
 
   .homeHeader.navbar-default .navbar-nav>.active>a,.homeHeader .navbar-nav>li>a {
-    padding-top: 35px;
-    font-size: 16px;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .homeHeader.navbar-default .navbar-nav>.open>a, 
+  .homeHeader.navbar-default .navbar-nav>.open>a:hover, 
+  .homeHeader.navbar-default .navbar-nav>.open>a:focus {
+    background: transparent;
   }
 
   .homeHeader.navbar-default .navbar-nav>li>a,.homeHeader.navbar-default .navbar-nav>li>a:hover,.homeHeader.navbar-default .navbar-nav>li>a:focus,.homeHeader.navbar-default .navbar-nav>.active>a,.homeHeader.navbar-default .navbar-nav>.active>a:hover,.homeHeader.navbar-default .navbar-nav>.active>a:focus {
@@ -1132,7 +1127,68 @@ margin-bottom: 10px;
     color: white;
     text-transform: uppercase;
     font-size: 16px;
-    font-family: "Avenir Next LT W01 Demi","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  article, aside {
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    padding: 10px 30px 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  .entry-header-thumbnail {
+    border-radius: 0;
+  }
+  
+}
+
+/*-------- Dirty Hacks for plugins etc --------*/
+
+/* Hide Share on non-blogposts and shop items */.at4-share-outer{display:none !important;}.single .at4-share-outer{display:inherit !important;}
+
+@media screen and (max-width:980px) {
+
+  #at4m-mobile-container{display:none !important;}.single #at4m-mobile-container {display:inherit !important;}
+  
+  /* ShareThis fix mobile */ .single .at4m-menu{top:80px !important;}
+                             .single {padding-bottom: 40px !important;}
+
+  /* Olark hide on mobile */ #habla_beta_container_do_not_rely_on_div_classes_or_names{display:none !important;}
+  
+  .pull-right {float: none !important;}
+  
+}
+
+/* Admin bar move down content if present */
+
+.admin-bar .navbar-fixed-top {
+  top: 32px;
+}
+
+@media screen and (max-width:782px) {
+  .admin-bar .navbar-fixed-top {
+    top: 46px;
+  }
+  .at4m-menu {
+    top: 127px;
+  }
+}
+
+/* wp menubar fixed on mobile too */
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+  position: fixed;
   }
 }
 

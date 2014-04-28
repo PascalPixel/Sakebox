@@ -14,9 +14,14 @@
 	  <div class="container">
     	<div class="row">
     	  <div class="col-sm-6">
-    	    <h4>About Sakébox</h4>
-    	    <p>Sakébox is a service that sends you a box full of delicious Japanese spirit samples every month, and offers you the possibility to order full-size bottles of your favorites.</p>
-    	    <p>Japanese spirits come in several forms like Saké and Shōchū, although often called 'rice wine', they can be distilled from fermented rice or sweet potato, are very clean, clear spirits and are usually heavily filtered, leaving few impurities, making them a good and healthy option to enjoy that's low in calories.<br><br></p>
+         	<div id="footer-sidebar1">
+          <?php
+          if(is_active_sidebar('footer-sidebar-1')){
+          dynamic_sidebar('footer-sidebar-1');
+          }
+          ?>
+          </div>
+          <br>
     	    <h4>Sign up for our newsletter</h4>
       	  <!-- Begin MailChimp Signup Form -->
           <form action="http://superpencil.us7.list-manage1.com/subscribe/post?u=43a0823be5d7c532fa4f7f239&amp;id=65b3ce1c66" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
@@ -35,7 +40,15 @@
       		  Copyright © 2014 <a href="http://www.rinkya.com">Rinkya</a>, LLC &nbsp;&nbsp;|&nbsp;&nbsp; Designed by <a class="superpencil" href="http://superpencil.com/?utm_source=sakebox&amp;amp;utm_medium=sakebox&amp;amp;utm_campaign=sakebox"><img alt="Superpencil Design" src="<?php bloginfo('template_directory'); ?>/img/superpencil-tag-logo.png"> Superpencil</a>
       		</div><!-- .site-info -->
     		</div>
-    	  <div class="col-sm-6">
+    	  <div class="col-sm-6 hidden-xs">
+    		  <div id="footer-sidebar2">
+          <?php
+          if(is_active_sidebar('footer-sidebar-2')){
+          dynamic_sidebar('footer-sidebar-2');
+          }
+          ?>
+          </div>
+          <br>
     		  <h4>Latest <a href="/the-sake-bomb">The Saké Bomb</a> post</h4>
           <?php
           	$args = array( 'posts_per_page' => 1 );

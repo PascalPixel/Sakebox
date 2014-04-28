@@ -33,8 +33,7 @@
   	<div class="row">
   		<div class="col-sm-12" style="height:100%;display:table;">
   		  <div class="heroback">
-    		  <h1>A Monthly Box of<br class="hidden-xs"> Delicious Saké Samples</h1>
-    		  <h3>Subscribe and get notified when we launch,<br class="hidden-xs"> or shop for full-size saké now!</h3>
+    		  <?php the_content(); ?>
     		  <br>
     		  <div class="row">
     		    <div class="col-xs-6">
