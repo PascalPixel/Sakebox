@@ -1129,9 +1129,13 @@ ul.payment_methods.methods li {
     font-size: 16px;
     font-weight: bold;
   }
+  
+  .logoNormal, .logoHome {
+    width: 225px;
+  }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
 
   article, aside {
     border: 1px solid #e0e0e0;
@@ -1149,6 +1153,11 @@ ul.payment_methods.methods li {
   
   .entry-header-thumbnail {
     border-radius: 0;
+  }
+  
+  img.attachment-shop_single.wp-post-image {
+    max-height: 200px;
+    width: auto;
   }
   
 }

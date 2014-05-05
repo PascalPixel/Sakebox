@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plugin = xili-language/xili-xl-bbp-addon.php\n"
+"Report-Msgid-Bugs-To: contact@xiligroup.com\n"
+"POT-Creation-Date: 2014-03-02T07:41:07+00:00\n"
+"PO-Revision-Date: 2014-03-02T07:41:07+00:00\n"
+"Last-Translator: admin <team@xiligroup.org>\n"
+"Language-Team: xili-dictionary WP plugin and  <team@xiligroup.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1\n"
+"X-Poedit-Language: fr_FR\n"
+"X-Poedit-Country: fr_FR\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: xili-xl-bbp-addon.php:199
+msgid "linked in:"
+msgstr "lié "
+
+#: xili-xl-bbp-addon.php:220
+msgid "List of options "
+msgstr "Liste des options"
+
+#: xili-xl-bbp-addon.php:222
+msgid "bbPress default style file in theme"
+msgstr "Utiliser le fichier style du thème bbPress par défaut qui est dans le thème courant"
+
+#: xili-xl-bbp-addon.php:223
+msgid "Repliers cannot delete topic tags"
+msgstr "Un commenteur ne peut pas effacer les mots-clefs"
+
+#: xili-xl-bbp-addon.php:228
+msgid "This plugin shipped with xili-language package is an addon to activate multilingual features to bbPress with xili-language. Some other options are possible."
+msgstr "Cette extension livrée avec xili-language est un complément qui permet d'avoir les forums de bbPress en univers multilingue. D'autres options pour bbPress sont possibles."
+
+#: xili-xl-bbp-addon.php:259
+msgid "Settings"
+msgstr "Réglages"
+
+#: xili-xl-bbp-addon.php:271
+msgid "%s settings"
+msgstr "Réglages de %s"
+
+#: xili-xl-bbp-addon.php:277
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+#: xili-xl-bbp-addon.php:279
+msgid "Author"
+msgstr "Auteur"
+
+#: xili-xl-bbp-addon.php:293
+msgid "For more information:"
+msgstr "Pour plus d'informations :"
+
+#: xili-xl-bbp-addon.php:294
+msgid "<a href=\"http://wiki.xiligroup.org\" target=\"_blank\">Xili Plugins Documentation and WIKI</a>"
+msgstr "<a href=\"http://wiki.xiligroup.org\" target=\"_blank\">Documentation et WIKI xili</a>"
+
+#: xili-xl-bbp-addon.php:295
+msgid "<a href=\"http://dev.xiligroup.com/\" target=\"_blank\">Xili Plugins news</a>"
+msgstr "<a href=\"http://dev.xiligroup.com/\" target=\"_blank\">Le site des extensions Xili-language et autres</a>"
+
+#: xili-xl-bbp-addon.php:296
+msgid "<a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress Documentation</a>"
+msgstr "<a href=\"http://codex.wordpress.org/\" target=\"_blank\">Documentation WordPress</a>"
+
+#: xili-xl-bbp-addon.php:297
+msgid "<a href=\"http://dev.xiligroup.com/?post_type=forum/\" target=\"_blank\">Support Forums</a>"
+msgstr "<a href=\"http://dev.xiligroup.com/?post_type=forum/\" target=\"_blank\">Forum Support</a>"
+
+#: xili-xl-bbp-addon.php:301
+msgid "Things to remember to set xili xl-bbPress add-on:"
+msgstr "Eléments à prendre en compte pour régler xili xl-bbPress add-on :"
+
+#: xili-xl-bbp-addon.php:303
+msgid "Activate this plugin only if bbPress plugin is activated."
+msgstr "N'activer cette extension seulement et seulement si l'extension bbPress est active."
+
+#: xili-xl-bbp-addon.php:304
+msgid "Remember that a forum is assigned to one language. Consequences: topics and replies are assigned to this language."
+msgstr "Se rappeler qu'un forum est affecté à une langue. Dès lors, sujets et réponses sont assignés à cette langue."
+
+#: xili-xl-bbp-addon.php:305
+msgid "If xili-tidy-tags plugin is activated, a new instance is created for Topic-Tags. So it is possible to group Topic-Tags in clouds (by language or semantic group)."
+msgstr "Si l'extension xili-tidy-tags est activée, une nouvelle instance est créée pour les mots-clefs de sujet. Ainsi, il est possible de créer des nuages selon la langue ou des groupes sémantiques."
+
+#: xili-xl-bbp-addon.php:306
+msgid "This first version contains basic features. Pre-tested with bbPress 2.3beta"
+msgstr "Cette première version contient des fonctions de base et est pré-testées avec bbPress 2.3 beta"
+
+#: xili-xl-bbp-addon.php:307
+msgid "The options below are provided to customize style (css in theme) or change behaviour (Repliers cannot delete tags)."
+msgstr "Les options ici permettent de définir la feuille de style active (dans le theme) ou de changer les règles (le commenteur ne peut pas effacer les mots-clefs)."
+
+#: xili-xl-bbp-addon.php:312
+msgid "About xili xl-bbPress add-on"
+msgstr "A propos de xili xl-bbPress add-on"
+
+#: xili-xl-bbp-addon.php:317
+msgid "For more infos"
+msgstr "Pour plus d'infos"
+
+#: xili-xl-bbp-addon.php:520
+msgid "Installation of both xili-language AND bbPress is not completed."
+msgstr "L'installation de xili-language ET de bbPress n'est pas complète."

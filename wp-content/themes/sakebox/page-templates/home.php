@@ -84,7 +84,7 @@ get_header();
     	$_product = new WC_Product( $loop->post->ID );
     }
     ?>
-      <div class="col-sm-5 col-md-4 col-lg-3">
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <?php woocommerce_show_product_sale_flash( $post, $_product ); ?>
       	<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
           <div class="shop-item imgwrap">
